@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mango77x.github.io/MHForever-site/sitemap.xml

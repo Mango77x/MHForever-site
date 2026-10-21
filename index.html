@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>MHForever | Monster Hunter Freedom Unite on PC</title>
+<meta name="description" content="MHForever is an unofficial native PC port of Monster Hunter Freedom Unite made by static recompilation. No emulator, any controller, and a launcher that sets everything up from your own copy of the game.">
+<meta name="theme-color" content="#0b0c10">
+<link rel="canonical" href="https://mango77x.github.io/MHForever-site/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="img/icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="img/icon-128.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="MHForever | Monster Hunter Freedom Unite on PC">
+<meta property="og:description" content="An unofficial native PC port of Monster Hunter Freedom Unite through static recompilation. No emulator. Bring your own copy.">
+<meta property="og:image" content="https://mango77x.github.io/MHForever-site/img/og.png">
+<meta property="og:url" content="https://mango77x.github.io/MHForever-site/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "MHForever",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Windows",
+  "description": "Unofficial native PC port of Monster Hunter Freedom Unite made by static recompilation.",
+  "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+  "url": "https://mango77x.github.io/MHForever-site/",
+  "downloadUrl": "https://github.com/Mango77x/MHForever/releases/latest",
+  "codeRepository": "https://github.com/Mango77x/MHForever",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+}
+</script>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="MHForever">
+      <img src="img/icon-128.png" alt="" width="34" height="34">
+      <b>MHForever</b>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#what" data-i18n="nav.project">Project</a>
+      <a href="#how" data-i18n="nav.how">How it works</a>
+      <a href="#fps" data-i18n="nav.fps">Frame rate</a>
+      <a href="#status" data-i18n="nav.status">Status</a>
+      <a href="#roadmap" data-i18n="nav.roadmap">Roadmap</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+    <div class="nav-end">
+      <div class="seg lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="btn ghost small" href="https://github.com/Mango77x/MHForever" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5-5.9-3.2-5.9 3.2 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>
+        <span data-i18n="nav.star">Star on GitHub</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ------------------------------------------------------------ hero -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1 data-i18n="hero.h1">Monster Hunter Freedom Unite, running natively on PC.</h1>
+        <p class="lede" data-i18n="hero.sub">MHForever is an unofficial port made by static recompilation. No emulator, any controller, and a launcher that sets everything up from your own copy of the game.</p>
+        <div class="cta-row">
+          <a class="btn primary" id="dl" href="https://github.com/Mango77x/MHForever/releases/latest" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+            <span data-i18n="hero.cta1">Download for Windows</span>
+          </a>
+          <a class="btn ghost" href="https://github.com/Mango77x/MHForever" rel="noopener" data-i18n="hero.cta2">View on GitHub</a>
+        </div>
+        <ul class="chips">
+          <li class="chip ok" data-i18n="hero.chip1">Playable today</li>
+          <li class="chip" data-i18n="hero.chip2">European release, ULES01213</li>
+          <li class="chip" id="ver" data-i18n="hero.chip3">Latest release on GitHub</li>
+          <li class="chip" data-i18n="hero.chip4">Open source, GPL-3.0</li>
+        </ul>
+        <p class="fine" data-i18n="hero.note">Requires your own copy of the game. No game files are included or downloaded.</p>
+      </div>
+
+      <div class="hero-visual">
+        <div class="launcher" aria-hidden="true" data-mock>
+          <div class="l-rail">
+            <img src="img/icon-128.png" alt="" width="34" height="34">
+            <span class="l-btn on"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg></span>
+            <span class="l-btn"><svg viewBox="0 0 24 24" width="18" height="18"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></g></svg></span>
+            <span class="l-btn"><svg viewBox="0 0 24 24" width="18" height="18"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h9M17 8h3M4 16h3M11 16h9"/><circle cx="15" cy="8" r="2"/><circle cx="9" cy="16" r="2"/></g></svg></span>
+          </div>
+          <div class="l-main">
+            <div class="l-top"><b>MHForever</b><span data-i18n="mock.home">Home</span></div>
+            <div class="l-hero">
+              <svg class="l-art" viewBox="0 0 400 200" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+                <circle cx="318" cy="52" r="15" fill="#e3c88f" opacity=".9"/>
+                <circle cx="318" cy="52" r="30" fill="#e3c88f" opacity=".1"/>
+                <path d="M0 150 L70 96 L130 140 L210 70 L290 135 L350 100 L400 130 V200 H0Z" fill="#2c2438"/>
+                <path d="M0 172 L90 130 L170 168 L260 120 L340 160 L400 140 V200 H0Z" fill="#1a1622"/>
+              </svg>
+              <div class="l-text">
+                <span class="l-pill" data-i18n="mock.welcome">Welcome</span>
+                <p class="l-h" data-i18n="mock.h">Bring your game.</p>
+                <p class="l-p" data-i18n="mock.p">Add your own copy and play it natively on PC.</p>
+                <span class="l-cta"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M12 5v14M5 12h14"/></svg><span data-i18n="mock.add">Add my copy</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="glow" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ what -->
+  <section class="block" id="what">
+    <div class="wrap two">
+      <div class="head">
+        <h2 data-i18n="what.h">A native program, not an emulator</h2>
+        <p class="lede" data-i18n="what.p">The game's code is translated ahead of time into native PC code, and the console's system services are re-implemented. The result is a normal Windows program that runs the game directly, with a modern launcher around it.</p>
+      </div>
+      <div class="rows">
+        <div class="row">
+          <h3 data-i18n="what.r1h">Native, not emulated</h3>
+          <p data-i18n="what.r1p">No emulator runs in the middle. That is what makes higher resolutions, any controller and, later, online play practical.</p>
+        </div>
+        <div class="row">
+          <h3 data-i18n="what.r2h">Your copy, your files</h3>
+          <p data-i18n="what.r2p">MHForever never includes or downloads game assets. Everything is read from the disc image you provide, and your saves stay on your computer.</p>
+        </div>
+        <div class="row">
+          <h3 data-i18n="what.r3h">Built to grow</h3>
+          <p data-i18n="what.r3p">Each game is a module on a shared runtime. Freedom Unite is the first one. More games and regions are planned.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ how -->
+  <section class="block" id="how">
+    <div class="wrap">
+      <div class="head wide">
+        <h2 data-i18n="how.h">From your disc image to playing</h2>
+        <p class="lede" data-i18n="how.p">Four steps, all inside the launcher. No development tools.</p>
+      </div>
+      <div class="how" id="howbox">
+        <ol class="steps" id="steps">
+          <li><button type="button" class="step on" data-step="1" aria-current="step">
+            <span class="n">1</span><span class="t"><b data-i18n="how.s1h">Download and unzip</b><i data-i18n="how.s1p">Get the zip from the Releases page and unzip it anywhere.</i></span></button></li>
+          <li><button type="button" class="step" data-step="2">
+            <span class="n">2</span><span class="t"><b data-i18n="how.s2h">Add your copy</b><i data-i18n="how.s2p">Open MHForever.exe and choose your own .iso of Freedom Unite, a plain uncompressed image of your UMD.</i></span></button></li>
+          <li><button type="button" class="step" data-step="3">
+            <span class="n">3</span><span class="t"><b data-i18n="how.s3h">Let it check and prepare</b><i data-i18n="how.s3p">The launcher verifies your copy and prepares what the game needs on your PC. It can also keep a copy of the image in its own folder.</i></span></button></li>
+          <li><button type="button" class="step" data-step="4">
+            <span class="n">4</span><span class="t"><b data-i18n="how.s4h">Press Play</b><i data-i18n="how.s4p">Gamepads work out of the box and keyboard defaults are included.</i></span></button></li>
+        </ol>
+
+        <div class="launcher big" data-mock data-state="1" id="mock2" aria-live="polite">
+          <div class="l-rail">
+            <img src="img/icon-128.png" alt="" width="34" height="34">
+            <span class="l-btn on"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 11l8-7 8 7v9h-5v-6H9v6H4z"/></svg></span>
+            <span class="l-btn"><svg viewBox="0 0 24 24" width="18" height="18"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="4" width="6.5" height="6.5" rx="1.5"/><rect x="4" y="13.5" width="6.5" height="6.5" rx="1.5"/><rect x="13.5" y="13.5" width="6.5" height="6.5" rx="1.5"/></g></svg></span>
+            <span class="l-btn"><svg viewBox="0 0 24 24" width="18" height="18"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 8h9M17 8h3M4 16h3M11 16h9"/><circle cx="15" cy="8" r="2"/><circle cx="9" cy="16" r="2"/></g></svg></span>
+          </div>
+          <div class="l-main">
+            <div class="l-top"><b>MHForever</b><span data-i18n="mock.home">Home</span></div>
+            <div class="l-hero scenes">
+              <svg class="l-art" viewBox="0 0 400 200" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+                <circle cx="318" cy="52" r="15" fill="#e3c88f" opacity=".9"/>
+                <circle cx="318" cy="52" r="30" fill="#e3c88f" opacity=".1"/>
+                <path d="M0 150 L70 96 L130 140 L210 70 L290 135 L350 100 L400 130 V200 H0Z" fill="#2c2438"/>
+                <path d="M0 172 L90 130 L170 168 L260 120 L340 160 L400 140 V200 H0Z" fill="#1a1622"/>
+              </svg>
+
+              <div class="scene s1">
+                <div class="file"><span class="fi zip">ZIP</span><span class="fn">MHForever-windows-x64.zip</span><span class="ok-dot"></span></div>
+                <div class="file f2"><img src="img/icon-32.png" alt="" width="26" height="26"><span class="fn">MHForever.exe</span><span class="fs" data-i18n="mock.unzipped">Unzipped</span></div>
+                <p class="l-p" data-i18n="mock.s1">Unzip it anywhere and open MHForever.exe.</p>
+              </div>
+              <div class="scene s2">
+                <p class="l-h" data-i18n="mock.h">Bring your game.</p>
+                <p class="l-p" data-i18n="mock.p">Add your own copy and play it natively on PC.</p>
+                <span class="l-cta"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" d="M12 5v14M5 12h14"/></svg><span data-i18n="mock.add">Add my copy</span></span>
+                <div class="file f2"><span class="fi">ISO</span><span class="fn">freedom-unite-eu.iso</span><span class="fs" data-i18n="mock.chosen">Chosen</span></div>
+              </div>
+              <div class="scene s3">
+                <p class="l-h small" data-i18n="mock.s3h">Checking your copy</p>
+                <div class="bar"><i></i></div>
+                <ul class="checks">
+                  <li data-i18n="mock.c1">Disc image checked</li>
+                  <li data-i18n="mock.c2">Game prepared on this PC</li>
+                  <li data-i18n="mock.c3">Nothing is uploaded</li>
+                </ul>
+              </div>
+              <div class="scene s4">
+                <p class="l-h small">Monster Hunter Freedom Unite</p>
+                <p class="l-p" data-i18n="mock.s4p">European release, ULES01213</p>
+                <span class="l-cta play"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M7 4.5v15l12-7.5z"/></svg><span data-i18n="mock.play">Play</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ fps -->
+  <section class="block" id="fps">
+    <div class="wrap two">
+      <div class="head">
+        <h2 data-i18n="fps.h">Smoother than the original</h2>
+        <p class="lede" data-i18n="fps.p">The original game runs at 30 frames per second. MHForever is learning to draw extra frames in between, so motion looks smoother on a fast screen. Compare the options.</p>
+        <p class="status-note"><span class="chip warn" data-i18n="fps.badge">In testing</span> <span data-i18n="fps.note">Not in the current release. On a 60 Hz screen, anything above 60 looks the same as 60.</span></p>
+      </div>
+      <div class="demo">
+        <div class="demo-top">
+          <span id="fpsLabel" class="mute" data-i18n="fps.label">Frames per second</span>
+          <div class="seg wide" role="radiogroup" aria-labelledby="fpsLabel" id="fpsSeg">
+            <button type="button" role="radio" aria-checked="true" data-fps="30">30</button>
+            <button type="button" role="radio" aria-checked="false" data-fps="60">60</button>
+            <button type="button" role="radio" aria-checked="false" data-fps="90">90</button>
+            <button type="button" role="radio" aria-checked="false" data-fps="120">120</button>
+            <button type="button" role="radio" aria-checked="false" data-fps="180">180</button>
+          </div>
+        </div>
+        <div class="stage">
+          <canvas id="fpsCanvas" width="720" height="300" aria-label="Animated comparison of frame rates" role="img"></canvas>
+          <button type="button" class="pp" id="pp" aria-pressed="false" data-i18n="fps.pause">Pause</button>
+        </div>
+        <p class="demo-read"><span id="fpsRead">30</span> <span data-i18n="fps.unit">frames per second</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ status -->
+  <section class="block" id="status">
+    <div class="wrap two">
+      <div class="head">
+        <h2 data-i18n="st.h">Where the project is today</h2>
+        <p class="lede" data-i18n="st.p">It is early software. The game boots and can be played, but expect rough edges and bugs. Reports are welcome.</p>
+        <a class="btn ghost" href="https://github.com/Mango77x/MHForever/issues" rel="noopener" data-i18n="st.issue">Report a problem</a>
+      </div>
+      <dl class="table">
+        <div><dt data-i18n="st.k1">Playable game</dt><dd data-i18n="st.v1">Monster Hunter Freedom Unite (PSP), European release. It is the only game for now.</dd></div>
+        <div><dt data-i18n="st.k2">Frame rate</dt><dd data-i18n="st.v2">30 fps, like the original console. 60 and above are being tested.</dd></div>
+        <div><dt data-i18n="st.k3">Online play</dt><dd data-i18n="st.v3">Not available yet. Internet multiplayer is being designed.</dd></div>
+        <div><dt data-i18n="st.k4">Platforms</dt><dd data-i18n="st.v4">Windows, 64-bit. Linux and Steam Deck are planned.</dd></div>
+        <div><dt data-i18n="st.k5">Controllers</dt><dd data-i18n="st.v5">Gamepads work out of the box. Tested with a PS5 DualSense. Other pads recognized by SDL should work.</dd></div>
+        <div><dt data-i18n="st.k6">Resolution</dt><dd data-i18n="st.v6">Several times the original 480×272, with an optional smoother texture filter.</dd></div>
+        <div><dt data-i18n="st.k7">Other games and regions</dt><dd data-i18n="st.v7">The US and Japanese releases of Freedom Unite and other games of the series are planned.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ vision -->
+  <section class="block vision" id="vision">
+    <div class="wrap">
+      <div class="vm">
+        <div>
+          <h2 data-i18n="vm.h1">Mission</h2>
+          <p class="big" data-i18n="vm.m">Make Monster Hunter playable on modern PCs, natively, from the discs people already own.</p>
+        </div>
+        <div>
+          <h2 data-i18n="vm.h2">Vision</h2>
+          <p class="big" data-i18n="vm.v">One home for the whole series: every game, every region and every platform it came from.</p>
+        </div>
+      </div>
+      <p class="lede center" data-i18n="vm.p">Today that is one game. The plan is all of them.</p>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ roadmap -->
+  <section class="block" id="roadmap">
+    <div class="wrap two">
+      <div class="head">
+        <h2 data-i18n="rm.h">Roadmap</h2>
+        <p class="lede" data-i18n="rm.p">What is done, what is being worked on, and what comes next. The full list with details lives on GitHub.</p>
+        <a class="btn ghost" href="https://github.com/Mango77x/MHForever/blob/main/docs/10-roadmap.md" rel="noopener" data-i18n="rm.link">Read the full roadmap</a>
+      </div>
+      <ol class="timeline">
+        <li class="done"><span class="dot"></span><div><b data-i18n="rm.a">PSP runtime and recompiler</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
+        <li class="done"><span class="dot"></span><div><b data-i18n="rm.b">Freedom Unite reaches the main menu</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
+        <li class="done"><span class="dot"></span><div><b data-i18n="rm.c">Launcher and Windows release</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
+        <li class="now"><span class="dot"></span><div><b data-i18n="rm.d">Playable single-player</b><span class="tag" data-i18n="rm.now">In progress</span></div></li>
+        <li class="now"><span class="dot"></span><div><b data-i18n="rm.e">Smoother frame rate, 60 fps and above</b><span class="tag" data-i18n="rm.test">In testing</span></div></li>
+        <li><span class="dot"></span><div><b data-i18n="rm.f">Online multiplayer</b><span class="tag" data-i18n="rm.plan">Planned</span></div></li>
+        <li><span class="dot"></span><div><b data-i18n="rm.g">US and Japanese releases</b><span class="tag" data-i18n="rm.plan">Planned</span></div></li>
+        <li><span class="dot"></span><div><b data-i18n="rm.h2">More games of the series, on PSP and beyond</b><span class="tag" data-i18n="rm.plan">Planned</span></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ faq -->
+  <section class="block" id="faq">
+    <div class="wrap two">
+      <div class="head">
+        <h2 data-i18n="faq.h">Questions</h2>
+        <p class="lede" data-i18n="faq.p">Short answers to what people ask first.</p>
+      </div>
+      <div class="faq">
+        <details><summary data-i18n="faq.q1">Do I need to own the game?</summary><p data-i18n="faq.a1">Yes. MHForever requires your own legitimate copy of Freedom Unite. No game assets are included or downloaded.</p></details>
+        <details><summary data-i18n="faq.q2">Which version works?</summary><p data-i18n="faq.a2">The European release of Monster Hunter Freedom Unite for PSP (ULES01213, v1.01). The US and Japanese releases are planned.</p></details>
+        <details><summary data-i18n="faq.q3">Is this an emulator?</summary><p data-i18n="faq.a3">No. The game's program is recompiled into native PC code and the console's system services are re-implemented. You get a normal Windows program.</p></details>
+        <details><summary data-i18n="faq.q4">Is it legal?</summary><p data-i18n="faq.a4">MHForever contains no Capcom or Sony code or assets and asks you to use your own copy. It is not affiliated with Capcom or Sony. This is not legal advice, and laws differ by country.</p></details>
+        <details><summary data-i18n="faq.q5">Can I play online with friends?</summary><p data-i18n="faq.a5">Not yet. Internet multiplayer is being designed so you can hunt with friends without a PSP.</p></details>
+        <details><summary data-i18n="faq.q6">Does it work on Linux or Steam Deck?</summary><p data-i18n="faq.a6">Not yet. Both are planned.</p></details>
+        <details><summary data-i18n="faq.q7">How do I report a bug?</summary><p data-i18n="faq.a7">Open an issue on GitHub with your version and what happened. Reports are welcome.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------ final cta -->
+  <section class="final">
+    <div class="wrap final-in">
+      <img src="img/icon-512.png" alt="" width="120" height="120" class="final-logo">
+      <div>
+        <h2 data-i18n="end.h">Ready to hunt?</h2>
+        <p class="lede" data-i18n="end.p">Download the launcher, add your own copy and press Play.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://github.com/Mango77x/MHForever/releases/latest" rel="noopener" data-i18n="hero.cta1">Download for Windows</a>
+          <a class="btn ghost" href="https://github.com/Mango77x/MHForever" rel="noopener" data-i18n="nav.star">Star on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p data-i18n="foot.legal">MHForever is an unofficial fan project. It is not affiliated with, endorsed by or sponsored by Capcom or Sony. Monster Hunter is a trademark of its owner and is used here only to describe which games the project works with.</p>
+    <nav class="foot-links" aria-label="Project links">
+      <a href="https://github.com/Mango77x/MHForever" rel="noopener">GitHub</a>
+      <a href="https://github.com/Mango77x/MHForever/releases" rel="noopener">Releases</a>
+      <a href="https://github.com/Mango77x/MHForever/issues" rel="noopener">Issues</a>
+      <a href="https://github.com/Mango77x/MHForever/blob/main/LICENSE" rel="noopener">GPL-3.0</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
