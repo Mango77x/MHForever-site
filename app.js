@@ -69,6 +69,9 @@
     'faq.q5': '¿Puedo jugar en línea con amigos?', 'faq.a5': 'Todavía no. El multijugador por internet se está diseñando para que puedas cazar con amigos sin una PSP.',
     'faq.q6': '¿Funciona en Linux o en Steam Deck?', 'faq.a6': 'Todavía no. Ambos están planeados.',
     'faq.q7': '¿Cómo reporto un fallo?', 'faq.a7': 'Abre una issue en GitHub con tu versión y lo que pasó. Los reportes son bienvenidos.',
+    'faq.q8': '¿Perderé mis partidas al actualizar?', 'faq.a8': 'No. Las partidas se guardan en Documents\\MHForever\\saves y tus ajustes en %APPDATA%\\MHForever, fuera de la carpeta del programa, así que descomprimir una versión nueva nunca las toca. Las partidas de versiones anteriores que estaban junto al programa se copian la primera vez que pulsas Play.',
+    'faq.q9': '¿Puedo usar partidas de una PSP real?', 'faq.a9': 'Todavía no. No se admite importar partidas de una PSP real.',
+    'faq.q10': '¿Qué tasas de fotogramas hay?', 'faq.a10': 'El original va a 30 fps. En los Ajustes del launcher puedes elegir de 60 a 180 fps (cualquier múltiplo de 30): el juego sigue a 30 y se dibujan imágenes intermedias. Es experimental y las escenas pesadas pueden no mantener las tasas más altas.',
     'end.h': '¿Listo para cazar?', 'end.p': 'Descarga el launcher, añade tu propia copia y pulsa Jugar.',
     'foot.legal': 'MHForever es un proyecto de fans no oficial. No está afiliado, respaldado ni patrocinado por Capcom ni por Sony. Monster Hunter es una marca de su propietario y se usa aquí solo para describir con qué juegos funciona el proyecto.'
   };
@@ -134,6 +137,9 @@
     'faq.q5': 'フレンドとオンラインで遊べますか？', 'faq.a5': 'まだです。PSPがなくてもフレンドと狩りに行けるよう、インターネット対戦を設計中です。',
     'faq.q6': 'LinuxやSteam Deckで動きますか？', 'faq.a6': 'まだです。どちらも予定しています。',
     'faq.q7': '不具合はどう報告すればいいですか？', 'faq.a7': 'バージョンと状況を添えて、GitHubでissueを開いてください。報告をお待ちしています。',
+    'faq.q8': 'アップデートするとセーブデータは消えますか？', 'faq.a8': 'いいえ。セーブデータは Documents\\MHForever\\saves に、設定は %APPDATA%\\MHForever に保存され、プログラムのフォルダの外にあるため、新しいバージョンを展開しても影響を受けません。プログラムの横にあった古いバージョンのセーブデータは、初めて「Play」を押したときにコピーされます。',
+    'faq.q9': '実機PSPのセーブデータは使えますか？', 'faq.a9': 'まだ使えません。実機PSPのセーブデータの読み込みには対応していません。',
+    'faq.q10': '選べるフレームレートは？', 'faq.a10': 'オリジナルは30fpsです。ランチャーの設定で、30の倍数の60〜180fpsを選べます。ゲーム自体は30のままで、間のフレームを追加で描きます。試験的な機能で、負荷の高い場面では最高レートを維持できないことがあります。',
     'end.h': '狩りの準備はできましたか？', 'end.p': 'ランチャーをダウンロードし、お手持ちのコピーを追加して、プレイを押すだけです。',
     'foot.legal': 'MHForeverは非公式のファンプロジェクトです。CapcomおよびSonyとは提携・承認・後援の関係にありません。Monster Hunterは各権利者の商標であり、このプロジェクトが対応するゲームを説明する目的でのみ使用しています。'
   };
