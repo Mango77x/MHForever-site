@@ -1,7 +1,7 @@
-# MHForever site
+<h1 align="center"><img src="img/banner.png" alt="MHForever site" width="720"></h1>
 
-Source of the website for [MHForever](https://github.com/Mango77x/MHForever), an unofficial native PC port of
-*Monster Hunter Freedom Unite* made by static recompilation.
+Source of the website for [MHForever](https://github.com/Mango77x/MHForever), unofficial native PC ports of the
+classic *Monster Hunter* games made by static recompilation, starting with *Freedom Unite*.
 
 **The project, the downloads and the issues live in the main repository: https://github.com/Mango77x/MHForever**
 
