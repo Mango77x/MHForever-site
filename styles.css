@@ -364,3 +364,41 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .ci.fail::before { background: #ef6a5b; box-shadow: 0 0 8px #ef6a5b; }
 .ci.run::before { background: var(--warn); }
 .ci:hover { text-decoration: underline; }
+
+/* games grid */
+:root { --plan: #6aa8ff; }
+.legend { list-style: none; display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 0 0 28px; padding: 0; color: var(--ink-2); font-size: 0.9rem; }
+.legend li { display: inline-flex; align-items: center; gap: 8px; }
+.sdot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex: none; background: var(--mute); }
+.sdot.full { background: var(--ok); box-shadow: 0 0 10px var(--ok); }
+.sdot.partial { background: var(--warn); box-shadow: 0 0 10px var(--warn); }
+.sdot.planned { background: var(--plan); box-shadow: 0 0 10px var(--plan); }
+.sdot.none { background: #6c675f; }
+.games { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 20px; }
+.game { position: relative; aspect-ratio: 3 / 4; border-radius: 14px; outline: none; transition: transform 0.28s cubic-bezier(.2, .7, .2, 1), box-shadow 0.28s; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35); }
+.game:hover, .game:focus-visible { transform: scale(1.07); z-index: 2; box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55); }
+.game:focus-visible { box-shadow: 0 0 0 3px var(--accent), 0 18px 44px rgba(0, 0, 0, 0.55); }
+.game .cover { position: absolute; inset: 0; border-radius: inherit; overflow: hidden; border: 1px solid var(--line-2); background: linear-gradient(160deg, #1d1a1f, #121116); transition: filter 0.3s; }
+.game[data-status="planned"] .cover, .game[data-status="none"] .cover { filter: grayscale(1) brightness(0.72); }
+.game .ph { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 16px; text-align: center; }
+.game .ph img { opacity: 0.5; }
+.game .ph b { font-family: 'Sora', system-ui, sans-serif; font-size: 0.95rem; line-height: 1.25; color: var(--ink); font-weight: 600; text-wrap: balance; }
+.game .art { display: none; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.game .cover.has-art .ph { display: none; }
+.game .cover.has-art .art { display: block; }
+.game:hover .cover:not(.has-art) .ph b, .game:focus-visible .cover:not(.has-art) .ph b { opacity: 0; }
+.game .over { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; gap: 4px; padding: 44px 14px 14px; border-radius: 0 0 14px 14px; background: linear-gradient(to top, rgba(8, 8, 11, 0.96) 35%, rgba(8, 8, 11, 0)); opacity: 0; transform: translateY(8px); transition: opacity 0.25s, transform 0.25s; pointer-events: none; }
+.game:hover .over, .game:focus-visible .over { opacity: 1; transform: none; }
+.gname { font-weight: 700; font-size: 0.9rem; color: var(--ink); line-height: 1.25; }
+.gmeta { font-size: 0.78rem; color: var(--mute); }
+.gstat { display: inline-flex; align-items: center; gap: 8px; margin-top: 4px; font-size: 0.82rem; font-weight: 600; color: var(--ink); }
+.game[data-status="partial"] .gstat .sdot { background: var(--warn); box-shadow: 0 0 10px var(--warn); }
+.game[data-status="full"] .gstat .sdot { background: var(--ok); box-shadow: 0 0 10px var(--ok); }
+.game[data-status="planned"] .gstat .sdot { background: var(--plan); box-shadow: 0 0 10px var(--plan); }
+.game[data-status="none"] .gstat .sdot { background: #6c675f; }
+.game[data-status="partial"] .ph img { opacity: 0.9; }
+@media (hover: none) { .game .over { opacity: 1; transform: none; } .game[data-status="none"] .over { padding-top: 60px; } }
+@media (max-width: 560px) { .games { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+@media (prefers-reduced-motion: reduce) { .game, .game .over { transition: none; } }
+.game[data-status="partial"] .cover, .game[data-status="full"] .cover { background: linear-gradient(160deg, #3a2a1a, #17120f 70%); border-color: rgba(242, 165, 65, 0.45); }
+.game[data-status="partial"] .ph b, .game[data-status="full"] .ph b { color: var(--accent); }

@@ -40,6 +40,7 @@
     'fps.p': 'El juego original va a 30 fotogramas por segundo. MHForever está aprendiendo a dibujar fotogramas intermedios para que el movimiento se vea más suave en una pantalla rápida. Compara las opciones.',
     'fps.badge': 'En pruebas', 'fps.note': 'No está en la versión actual. En una pantalla de 60 Hz, todo lo que pase de 60 se ve igual que 60.',
     'fps.label': 'Fotogramas por segundo', 'fps.pause': 'Pausar', 'fps.play': 'Reproducir', 'fps.unit': 'fotogramas por segundo',
+    'games.h': 'Juegos actuales', 'games.p': 'Los Monster Hunter clásicos y en qué punto está cada uno. El color significa que funciona hoy.', 'games.first': 'Lanzado en', 'games.s.full': 'Totalmente implementado', 'games.s.partial': 'Parcialmente implementado', 'games.s.planned': 'Planeado', 'games.s.none': 'No implementado', 'games.note': 'Monster Hunter y las portadas de sus juegos pertenecen a Capcom. Se muestran solo para identificar cada juego. MHForever no está afiliado a Capcom.',
     'st.h': 'Dónde está el proyecto hoy',
     'st.p': 'Es software en fase temprana. El juego arranca y se puede jugar, pero espera fallos y asperezas. Los reportes son bienvenidos.',
     'st.issue': 'Reportar un problema',
@@ -104,6 +105,7 @@
     'fps.p': 'オリジナルのゲームは毎秒30フレームで動きます。MHForeverは間のフレームを追加で描く技術を試していて、高速なディスプレイでは動きがよりなめらかに見えます。下で違いを比べてみてください。',
     'fps.badge': 'テスト中', 'fps.note': '現在のリリースには含まれていません。60Hzの画面では、60を超えても60と同じ見え方になります。',
     'fps.label': '毎秒のフレーム数', 'fps.pause': '一時停止', 'fps.play': '再生', 'fps.unit': 'フレーム／秒',
+    'games.h': '対応ゲーム', 'games.p': 'クラシックなモンスターハンターシリーズと、それぞれの対応状況です。色がついているものは今すぐ動作します。', 'games.first': '初出', 'games.s.full': '完全対応', 'games.s.partial': '一部対応', 'games.s.planned': '対応予定', 'games.s.none': '未対応', 'games.note': 'モンスターハンターおよび各ゲームのカバーアートはカプコンに帰属します。ゲームを識別する目的でのみ表示しています。MHForeverはカプコンとは無関係です。',
     'st.h': 'プロジェクトの現状',
     'st.p': '開発初期のソフトウェアです。ゲームは起動して遊べますが、粗い部分や不具合があります。報告をお待ちしています。',
     'st.issue': '問題を報告する',
@@ -170,6 +172,14 @@
   try { saved = localStorage.getItem('mhf-lang'); } catch (e) { saved = null; }
   var browser = (navigator.language || 'en').toLowerCase();
   var initial = saved && (saved === 'en' || DICT[saved]) ? saved : (browser.indexOf('es') === 0 ? 'es' : browser.indexOf('ja') === 0 ? 'ja' : 'en');
+
+  /* ------------------------------------------------------------ game covers: use the art when the file exists */
+
+  Array.prototype.forEach.call(document.querySelectorAll('.game .art'), function (img) {
+    var probe = new Image();
+    probe.onload = function () { img.parentNode.classList.add('has-art'); };
+    probe.src = img.getAttribute('src');
+  });
 
   /* ------------------------------------------------------------ latest release */
 
@@ -238,7 +248,7 @@
 
   /* ------------------------------------------------------------ reveal on scroll */
 
-  var revealSel = '.head, .rows .row, .table > div, .timeline li, .faq details, .demo, .vm > div, .final-in, .how > *';
+  var revealSel = '.head, .game, .rows .row, .table > div, .timeline li, .faq details, .demo, .vm > div, .final-in, .how > *';
   var targets = Array.prototype.slice.call(document.querySelectorAll(revealSel));
   if ('IntersectionObserver' in window && !reduce) {
     var io = new IntersectionObserver(function (es) {
