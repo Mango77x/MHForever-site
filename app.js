@@ -43,6 +43,7 @@
     'st.h': 'Dónde está el proyecto hoy',
     'st.p': 'Es software en fase temprana. El juego arranca y se puede jugar, pero espera fallos y asperezas. Los reportes son bienvenidos.',
     'st.issue': 'Reportar un problema',
+    'live.k': 'Última versión', 'live.dl': 'Descargar', 'live.notes': 'Notas de la versión', 'live.stars': 'Estrellas', 'live.commit': 'Última actualización', 'live.issues': 'Issues abiertas', 'live.src': 'Datos leídos en directo desde GitHub.',
     'st.k1': 'Juego jugable', 'st.v1': 'Monster Hunter Freedom Unite (PSP), edición europea, conocido en Japón como Monster Hunter Portable 2nd G. Por ahora es el único juego.',
     'st.k2': 'Fotogramas', 'st.v2': '30 fps, como la consola original. Se están probando 60 y más.',
     'st.k3': 'Juego en línea', 'st.v3': 'Todavía no está disponible. El multijugador por internet se está diseñando.',
@@ -106,6 +107,7 @@
     'st.h': 'プロジェクトの現状',
     'st.p': '開発初期のソフトウェアです。ゲームは起動して遊べますが、粗い部分や不具合があります。報告をお待ちしています。',
     'st.issue': '問題を報告する',
+    'live.k': '最新リリース', 'live.dl': 'ダウンロード', 'live.notes': 'リリースノート', 'live.stars': 'スター', 'live.commit': '最終更新', 'live.issues': '未解決のIssue', 'live.src': 'GitHubからリアルタイムで取得しています。',
     'st.k1': 'プレイできるゲーム', 'st.v1': 'Monster Hunter Freedom Unite（PSP）欧州版。日本では『モンスターハンターポータブル 2nd G』。今のところ唯一のゲームです。',
     'st.k2': 'フレームレート', 'st.v2': 'オリジナルの本体と同じ30fps。60以上はテスト中です。',
     'st.k3': 'オンラインプレイ', 'st.v3': 'まだ利用できません。インターネット対戦を設計中です。',
@@ -158,6 +160,7 @@
       b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === l));
     });
     syncPause();
+    renderLive();
     try { localStorage.setItem('mhf-lang', l); } catch (e) { /* storage may be blocked */ }
   }
   Array.prototype.forEach.call(document.querySelectorAll('[data-lang]'), function (b) {
@@ -170,16 +173,55 @@
 
   /* ------------------------------------------------------------ latest release */
 
+  var live = { rel: null, repo: null };
+  var API = 'https://api.github.com/repos/Mango77x/MHForever';
+  var TTL = 10 * 60 * 1000; /* the unauthenticated API allows 60 requests an hour per IP */
+
+  function $(id) { return document.getElementById(id); }
+  function fmtDate(iso) {
+    try { return new Intl.DateTimeFormat(lang, { year: 'numeric', month: 'short', day: 'numeric' }).format(new Date(iso)); }
+    catch (e) { return String(iso).slice(0, 10); }
+  }
+  function fmtSize(b) { return b >= 1048576 ? (b / 1048576).toFixed(1) + ' MB' : ''; }
+  function renderLive() {
+    var rel = live.rel, repo = live.repo;
+    if (rel) {
+      $('liveVer').textContent = String(rel.tag_name).replace(/^v/, '');
+      $('liveDate').textContent = rel.published_at ? fmtDate(rel.published_at) : '';
+      var asset = (rel.assets || []).filter(function (a) { return /\.zip$/i.test(a.name); })[0];
+      if (asset) { $('liveDl').href = asset.browser_download_url; $('liveSize').textContent = fmtSize(asset.size); }
+      if (rel.html_url) $('liveNotes').href = rel.html_url;
+    }
+    if (repo) {
+      $('liveStars').textContent = String(repo.stargazers_count);
+      $('liveCommit').textContent = fmtDate(repo.pushed_at);
+      $('liveIssues').textContent = String(repo.open_issues_count);
+    }
+  }
+  function loaded() {
+    if (live.rel && live.rel.tag_name) {
+      version = String(live.rel.tag_name).replace(/^v/, '');
+      var chip = $('ver');
+      if (chip) chip.textContent = versionText();
+    }
+    renderLive();
+  }
+  function getJSON(url) {
+    return fetch(url, { headers: { Accept: 'application/vnd.github+json' } }).then(function (r) { return r.ok ? r.json() : null; });
+  }
   try {
-    fetch('https://api.github.com/repos/Mango77x/MHForever/releases/latest', { headers: { Accept: 'application/vnd.github+json' } })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (j) {
-        if (!j || !j.tag_name) return;
-        version = String(j.tag_name).replace(/^v/, '');
-        var chip = document.getElementById('ver');
-        if (chip) chip.textContent = versionText();
-      })
-      .catch(function () { /* offline or rate limited: keep the generic label */ });
+    var cached = null;
+    try { cached = JSON.parse(sessionStorage.getItem('mhf-live') || 'null'); } catch (e) { cached = null; }
+    if (cached && Date.now() - cached.t < TTL) {
+      live = cached.d;
+      loaded();
+    } else {
+      Promise.all([getJSON(API + '/releases/latest'), getJSON(API)]).then(function (r) {
+        live = { rel: r[0], repo: r[1] };
+        if (r[0] || r[1]) { try { sessionStorage.setItem('mhf-live', JSON.stringify({ t: Date.now(), d: live })); } catch (e) { /* storage blocked */ } }
+        loaded();
+      }).catch(function () { /* offline or rate limited: the card keeps its links */ });
+    }
   } catch (e) { /* fetch unavailable */ }
 
   /* ------------------------------------------------------------ reveal on scroll */

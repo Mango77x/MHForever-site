@@ -254,6 +254,20 @@
         <h2 data-i18n="st.h">Where the project is today</h2>
         <p class="lede" data-i18n="st.p">It is early software. The game boots and can be played, but expect rough edges and bugs. Reports are welcome.</p>
         <a class="btn ghost" href="https://github.com/Mango77x/MHForever/issues" rel="noopener" data-i18n="st.issue">Report a problem</a>
+        <div class="live" id="live" aria-live="polite">
+          <p class="live-k" data-i18n="live.k">Latest release</p>
+          <p class="live-v"><b id="liveVer">&mdash;</b> <span id="liveDate"></span></p>
+          <div class="live-act">
+            <a class="btn primary" id="liveDl" href="https://github.com/Mango77x/MHForever/releases/latest" rel="noopener"><span data-i18n="live.dl">Download</span><span id="liveSize"></span></a>
+            <a class="btn ghost" id="liveNotes" href="https://github.com/Mango77x/MHForever/releases/latest" rel="noopener" data-i18n="live.notes">Release notes</a>
+          </div>
+          <dl class="live-stats">
+            <div><dt data-i18n="live.stars">Stars</dt><dd id="liveStars">&mdash;</dd></div>
+            <div><dt data-i18n="live.commit">Last update</dt><dd id="liveCommit">&mdash;</dd></div>
+            <div><dt data-i18n="live.issues">Open issues</dt><dd id="liveIssues">&mdash;</dd></div>
+          </dl>
+          <p class="live-src" data-i18n="live.src">Read live from GitHub.</p>
+        </div>
       </div>
       <dl class="table">
         <div><dt data-i18n="st.k1">Playable game</dt><dd data-i18n="st.v1">Monster Hunter Freedom Unite (PSP), European release, known in Japan as Monster Hunter Portable 2nd G. It is the only game for now.</dd></div>
