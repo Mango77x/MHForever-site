@@ -25,8 +25,8 @@
   --on-accent: #1a1208;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-  --display: 'Sora', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --display: 'Sora', system-ui, -apple-system, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo', 'Noto Sans CJK JP', sans-serif;
+  --body: 'Manrope', system-ui, -apple-system, 'Segoe UI', 'Hiragino Sans', 'Yu Gothic UI', 'Meiryo', 'Noto Sans CJK JP', sans-serif;
   color-scheme: dark;
 }
 
@@ -104,14 +104,15 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .brand img { border-radius: 11px; }
 .brand b { font-family: var(--display); font-weight: 800; font-size: 1.15rem; letter-spacing: -0.01em; }
-.links { display: flex; gap: 4px; margin-left: 12px; }
-.links a { text-decoration: none; color: var(--mute); font-weight: 500; font-size: 0.95rem; padding: 8px 12px; border-radius: 10px; transition: color .2s, background .2s; }
+.links { display: flex; gap: 4px; margin-left: 24px; }
+.links a { white-space: nowrap; text-decoration: none; color: var(--mute); font-weight: 500; font-size: 0.95rem; padding: 8px 12px; border-radius: 10px; transition: color .2s, background .2s; }
 .links a:hover { color: var(--ink); background: rgba(255, 236, 210, 0.06); }
 .nav-end { margin-left: auto; display: flex; align-items: center; gap: 10px; }
 
 /* ---------------------------------------------------------------- buttons, chips */
 
 .btn {
+  white-space: nowrap;
   display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
   font-family: var(--display); font-weight: 600; font-size: 1rem;
   height: 52px; padding: 0 24px; border-radius: 16px; border: 1px solid transparent;
@@ -132,7 +133,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .chip.warn { color: var(--warn); border-color: rgba(242, 193, 78, 0.4); background: rgba(242, 193, 78, 0.08); }
 
 .seg { display: inline-flex; padding: 4px; gap: 2px; border-radius: 14px; border: 1px solid var(--line-2); background: rgba(255, 236, 210, 0.03); }
-.seg button { border: 0; background: transparent; color: var(--mute); font-family: var(--display); font-weight: 600; font-size: 0.85rem; min-width: 44px; height: 34px; padding: 0 12px; border-radius: 10px; transition: background .2s, color .2s; }
+.seg button { white-space: nowrap; border: 0; background: transparent; color: var(--mute); font-family: var(--display); font-weight: 600; font-size: 0.85rem; min-width: 44px; height: 34px; padding: 0 12px; border-radius: 10px; transition: background .2s, color .2s; }
 .seg button:hover { color: var(--ink); }
 .seg button[aria-pressed="true"], .seg button[aria-checked="true"] { background: var(--accent); color: var(--on-accent); }
 .seg.wide button { min-width: 58px; height: 40px; font-size: 0.95rem; }
@@ -302,8 +303,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* ---------------------------------------------------------------- responsive */
 
-@media (max-width: 980px) {
+@media (max-width: 1140px) {
   .links { display: none; }
+}
+@media (max-width: 980px) {
   .two, .hero-grid, .how, .vm { grid-template-columns: minmax(0, 1fr); }
   .head { position: static; }
   .launcher { max-width: 640px; }
@@ -314,6 +317,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .nav-end { gap: 8px; }
   .nav-end .btn.small span { display: none; }
   .nav-end .btn.small { padding: 0 12px; }
+  .seg button { min-width: 36px; padding: 0 8px; }
+  .brand b { font-size: 1.05rem; }
   .btn { height: 50px; padding: 0 20px; }
   .table > div { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .final-in { flex-direction: column; align-items: flex-start; }
@@ -331,3 +336,10 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .bar i { transform: scaleX(1) !important; }
   .checks li { opacity: 1 !important; transform: none !important; }
 }
+
+/* Japanese: strict line breaking, a little more room between lines, lighter display weight */
+:lang(ja) { line-break: strict; word-break: auto-phrase; }
+:lang(ja) h1 { font-size: clamp(2rem, 4.4vw, 3.4rem); }
+:lang(ja) body { line-height: 1.8; }
+:lang(ja) h1, :lang(ja) h2, :lang(ja) .big { letter-spacing: 0; line-height: 1.25; font-weight: 700; }
+:lang(ja) .seg button { font-size: 0.8rem; }

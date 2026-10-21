@@ -10,7 +10,7 @@ publishes it with GitHub Pages.
 
 ## Working on it
 
-Open `index.html` in a browser. The page text is English in `index.html`; the Spanish translation is in `app.js`.
+Open `index.html` in a browser. The page text is English in `index.html`; the Spanish and Japanese translations are in `app.js`. English is the default; the page switches to Spanish or Japanese when the browser asks for them, and visitors can change it with the language buttons.
 The site contains no game assets, only original artwork (logo and launcher replica).
 
 Fonts: Sora and Manrope, both under the SIL Open Font License (see `fonts/`).

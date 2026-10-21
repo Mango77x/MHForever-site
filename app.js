@@ -71,6 +71,70 @@
     'foot.legal': 'MHForever es un proyecto de fans no oficial. No está afiliado, respaldado ni patrocinado por Capcom ni por Sony. Monster Hunter es una marca de su propietario y se usa aquí solo para describir con qué juegos funciona el proyecto.'
   };
 
+  var JA = {
+    'nav.project': 'プロジェクト', 'nav.how': '使い方', 'nav.fps': 'フレームレート', 'nav.status': '現状',
+    'nav.roadmap': 'ロードマップ', 'nav.faq': 'よくある質問', 'nav.star': 'GitHubでスター',
+    'hero.h1': 'Monster Hunter Freedom Unite を、PCでネイティブ動作。',
+    'hero.sub': 'MHForeverは、静的再コンパイルで作られた非公式ポートです。エミュレーターは使わず、好きなコントローラーで遊べて、ランチャーがお手持ちのゲームからセットアップをすべて行います。',
+    'hero.cta1': 'Windows版をダウンロード', 'hero.cta2': 'GitHubで見る',
+    'hero.chip1': '今すぐプレイ可能', 'hero.chip2': '欧州版 ULES01213', 'hero.chip3': 'GitHubの最新リリース',
+    'hero.chip4': 'オープンソース GPL-3.0',
+    'hero.note': 'ご自身で入手したゲームのコピーが必要です。ゲームのファイルは同梱されず、ダウンロードもされません。',
+    'mock.home': 'ホーム', 'mock.welcome': 'ようこそ', 'mock.h': 'ゲームを持ち込もう。',
+    'mock.p': 'お手持ちのコピーを追加して、PCでネイティブに遊べます。', 'mock.add': 'コピーを追加',
+    'mock.unzipped': '展開済み', 'mock.s1': '好きな場所に展開して、MHForever.exe を開きます。',
+    'mock.chosen': '選択済み', 'mock.s3h': 'コピーを確認中', 'mock.c1': 'ディスクイメージを確認しました',
+    'mock.c2': 'このPCでゲームを準備しました', 'mock.c3': '何もアップロードされません', 'mock.s4p': '欧州版 ULES01213',
+    'mock.play': 'プレイ',
+    'what.h': 'エミュレーターではなく、ネイティブなプログラム',
+    'what.p': 'ゲームのコードは事前にPC向けのネイティブコードへ変換され、本体のシステム機能は再実装されています。その結果、ゲームを直接動かす通常のWindowsプログラムになり、周りには最新のランチャーが付きます。',
+    'what.r1h': 'エミュレーターではなくネイティブ',
+    'what.r1p': 'エミュレーターを介しません。だから高解像度や好きなコントローラー、そして将来のオンライン対戦も現実的になります。',
+    'what.r2h': 'あなたのコピー、あなたのファイル',
+    'what.r2p': 'MHForeverはゲームのデータを同梱もダウンロードもしません。すべてあなたが用意したディスクイメージから読み込まれ、セーブデータもあなたのPCに残ります。',
+    'what.r3h': '拡張を前提に',
+    'what.r3p': 'ゲームごとに、共通のランタイム上のモジュールとして作られます。最初のゲームはFreedom Uniteで、今後ほかのゲームや地域も予定しています。',
+    'how.h': 'ディスクイメージからプレイまで', 'how.p': '手順は4つ。すべてランチャーの中で完結し、開発ツールは不要です。',
+    'how.s1h': 'ダウンロードして展開', 'how.s1p': 'Releasesページからzipを入手し、好きな場所に展開します。',
+    'how.s2h': 'コピーを追加', 'how.s2p': 'MHForever.exe を開き、お手持ちのFreedom Uniteの .iso（UMDを圧縮せずに吸い出した通常のイメージ）を選びます。',
+    'how.s3h': '確認と準備を任せる', 'how.s3p': 'ランチャーがコピーを検証し、ゲームに必要なものをお使いのPC上で準備します。イメージのコピーを専用フォルダに保存することもできます。',
+    'how.s4h': 'プレイを押す', 'how.s4p': 'ゲームパッドは設定なしで使え、キーボードの初期設定も用意されています。',
+    'fps.h': 'オリジナルよりなめらかに',
+    'fps.p': 'オリジナルのゲームは毎秒30フレームで動きます。MHForeverは間のフレームを追加で描く技術を試していて、高速なディスプレイでは動きがよりなめらかに見えます。下で違いを比べてみてください。',
+    'fps.badge': 'テスト中', 'fps.note': '現在のリリースには含まれていません。60Hzの画面では、60を超えても60と同じ見え方になります。',
+    'fps.label': '毎秒のフレーム数', 'fps.pause': '一時停止', 'fps.play': '再生', 'fps.unit': 'フレーム／秒',
+    'st.h': 'プロジェクトの現状',
+    'st.p': '開発初期のソフトウェアです。ゲームは起動して遊べますが、粗い部分や不具合があります。報告をお待ちしています。',
+    'st.issue': '問題を報告する',
+    'st.k1': 'プレイできるゲーム', 'st.v1': 'Monster Hunter Freedom Unite（PSP）欧州版。今のところ唯一のゲームです。',
+    'st.k2': 'フレームレート', 'st.v2': 'オリジナルの本体と同じ30fps。60以上はテスト中です。',
+    'st.k3': 'オンラインプレイ', 'st.v3': 'まだ利用できません。インターネット対戦を設計中です。',
+    'st.k4': 'プラットフォーム', 'st.v4': 'Windows（64ビット）。LinuxとSteam Deckは予定しています。',
+    'st.k5': 'コントローラー', 'st.v5': 'ゲームパッドは設定なしで使えます。PS5 DualSenseで動作確認済み。SDLが認識するほかのパッドも動くはずです。',
+    'st.k6': '解像度', 'st.v6': 'オリジナルの480×272の数倍。より滑らかなテクスチャフィルターも選べます。',
+    'st.k7': 'ほかのゲームと地域', 'st.v7': 'Freedom Uniteの北米版・日本版や、シリーズのほかのゲームを予定しています。',
+    'vm.h1': 'ミッション', 'vm.m': 'すでに手元にあるディスクから、モンスターハンターを現代のPCでネイティブに遊べるようにすること。',
+    'vm.h2': 'ビジョン', 'vm.v': 'シリーズ全体の拠り所となること。すべてのゲーム、すべての地域、そして元のすべてのプラットフォームを。',
+    'vm.p': '今は1本。目指すのは、すべてです。',
+    'rm.h': 'ロードマップ', 'rm.p': '完了したこと、取り組み中のこと、これからのこと。詳細な一覧はGitHubにあります。',
+    'rm.link': '完全なロードマップを読む',
+    'rm.a': 'PSPランタイムとリコンパイラー', 'rm.b': 'Freedom Uniteがメインメニューまで到達', 'rm.c': 'ランチャーとWindows版リリース',
+    'rm.d': 'シングルプレイを遊べる状態に', 'rm.e': 'よりなめらかなフレームレート（60fps以上）', 'rm.f': 'オンラインマルチプレイ',
+    'rm.g': '北米版・日本版', 'rm.h2': 'シリーズのほかのゲーム（PSPとその先へ）',
+    'rm.done': '完了', 'rm.now': '取り組み中', 'rm.test': 'テスト中', 'rm.plan': '予定',
+    'faq.h': 'よくある質問', 'faq.p': 'よく聞かれることへの短い答えです。',
+    'faq.q1': 'ゲームを持っている必要がありますか？', 'faq.a1': 'はい。MHForeverにはFreedom Uniteの正規のコピーが必要です。ゲームのデータは同梱もダウンロードもされません。',
+    'faq.q2': 'どのバージョンで動きますか？', 'faq.a2': 'PSP版 Monster Hunter Freedom Unite の欧州版（ULES01213、v1.01）です。北米版と日本版（日本では『モンスターハンターポータブル 2nd G』）は予定しています。',
+    'faq.q3': 'エミュレーターですか？', 'faq.a3': 'いいえ。ゲームのプログラムをPC向けのネイティブコードに再コンパイルし、本体のシステム機能を再実装しています。通常のWindowsプログラムとして動きます。',
+    'faq.q4': '合法ですか？', 'faq.a4': 'MHForeverにはCapcomやSonyのコードやデータは含まれず、ご自身のコピーを使う前提です。CapcomおよびSonyとは無関係です。これは法的助言ではなく、法律は国によって異なります。',
+    'faq.q5': 'フレンドとオンラインで遊べますか？', 'faq.a5': 'まだです。PSPがなくてもフレンドと狩りに行けるよう、インターネット対戦を設計中です。',
+    'faq.q6': 'LinuxやSteam Deckで動きますか？', 'faq.a6': 'まだです。どちらも予定しています。',
+    'faq.q7': '不具合はどう報告すればいいですか？', 'faq.a7': 'バージョンと状況を添えて、GitHubでissueを開いてください。報告をお待ちしています。',
+    'end.h': '狩りの準備はできましたか？', 'end.p': 'ランチャーをダウンロードし、お手持ちのコピーを追加して、プレイを押すだけです。',
+    'foot.legal': 'MHForeverは非公式のファンプロジェクトです。CapcomおよびSonyとは提携・承認・後援の関係にありません。Monster Hunterは各権利者の商標であり、このプロジェクトが対応するゲームを説明する目的でのみ使用しています。'
+  };
+
+  var DICT = { es: ES, ja: JA };
   var nodes = Array.prototype.slice.call(document.querySelectorAll('[data-i18n]'));
   var EN = {};
   nodes.forEach(function (n) { EN[n.getAttribute('data-i18n')] = n.textContent; });
@@ -79,14 +143,14 @@
 
   function versionText() {
     if (!version) return null;
-    return lang === 'es' ? 'Versión ' + version : 'Version ' + version;
+    return ({ es: 'Versión ', ja: 'バージョン ' }[lang] || 'Version ') + version;
   }
   function apply(l) {
     lang = l;
     root.lang = l;
     nodes.forEach(function (n) {
       var k = n.getAttribute('data-i18n');
-      var v = l === 'es' && ES[k] ? ES[k] : EN[k];
+      var v = (DICT[l] && DICT[l][k]) || EN[k];
       if (k === 'hero.chip3' && versionText()) v = versionText();
       n.textContent = v;
     });
@@ -101,7 +165,8 @@
   });
   var saved = null;
   try { saved = localStorage.getItem('mhf-lang'); } catch (e) { saved = null; }
-  var initial = saved || ((navigator.language || '').toLowerCase().indexOf('es') === 0 ? 'es' : 'en');
+  var browser = (navigator.language || 'en').toLowerCase();
+  var initial = saved && (saved === 'en' || DICT[saved]) ? saved : (browser.indexOf('es') === 0 ? 'es' : browser.indexOf('ja') === 0 ? 'ja' : 'en');
 
   /* ------------------------------------------------------------ latest release */
 
@@ -216,7 +281,8 @@
   }
   function syncPause() {
     pp.setAttribute('aria-pressed', String(!playing));
-    pp.textContent = playing ? (lang === 'es' ? 'Pausar' : 'Pause') : (lang === 'es' ? 'Reproducir' : 'Play');
+    var L = { en: ['Pause', 'Play'], es: ['Pausar', 'Reproducir'], ja: ['一時停止', '再生'] }[lang] || ['Pause', 'Play'];
+    pp.textContent = playing ? L[0] : L[1];
   }
   pp.addEventListener('click', function () {
     if (playing) { offset = performance.now() - t0; playing = false; }
