@@ -386,7 +386,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .game .art { display: none; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .game .cover.has-art .ph { display: none; }
 .game .cover.has-art .art { display: block; }
-.game:hover .cover:not(.has-art) .ph b, .game:focus-visible .cover:not(.has-art) .ph b { opacity: 0; }
+.game:hover .cover:not(.has-art) .ph > *, .game:focus-visible .cover:not(.has-art) .ph > * { opacity: 0; }
 .game .over { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; gap: 4px; padding: 44px 14px 14px; border-radius: 0 0 14px 14px; background: linear-gradient(to top, rgba(8, 8, 11, 0.96) 35%, rgba(8, 8, 11, 0)); opacity: 0; transform: translateY(8px); transition: opacity 0.25s, transform 0.25s; pointer-events: none; }
 .game:hover .over, .game:focus-visible .over { opacity: 1; transform: none; }
 .gname { font-weight: 700; font-size: 0.9rem; color: var(--ink); line-height: 1.25; }
@@ -402,3 +402,4 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 @media (prefers-reduced-motion: reduce) { .game, .game .over { transition: none; } }
 .game[data-status="partial"] .cover, .game[data-status="full"] .cover { background: linear-gradient(160deg, #3a2a1a, #17120f 70%); border-color: rgba(242, 165, 65, 0.45); }
 .game[data-status="partial"] .ph b, .game[data-status="full"] .ph b { color: var(--accent); }
+.gsup { color: var(--accent); }
