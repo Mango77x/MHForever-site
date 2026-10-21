@@ -104,8 +104,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .brand img { border-radius: 11px; }
 .brand b { font-family: var(--display); font-weight: 800; font-size: 1.15rem; letter-spacing: -0.01em; }
-.links { display: flex; gap: 4px; margin-left: 24px; }
-.links a { white-space: nowrap; text-decoration: none; color: var(--mute); font-weight: 500; font-size: 0.95rem; padding: 8px 12px; border-radius: 10px; transition: color .2s, background .2s; }
+.links { display: flex; gap: 0; margin-left: 16px; }
+.links a { white-space: nowrap; text-decoration: none; color: var(--mute); font-weight: 500; font-size: 0.92rem; padding: 8px 10px; border-radius: 10px; transition: color .2s, background .2s; }
 .links a:hover { color: var(--ink); background: rgba(255, 236, 210, 0.06); }
 .nav-end { margin-left: auto; display: flex; align-items: center; gap: 10px; }
 
@@ -303,7 +303,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 
 /* ---------------------------------------------------------------- responsive */
 
-@media (max-width: 1140px) {
+@media (max-width: 1260px) {
   .links { display: none; }
 }
 @media (max-width: 980px) {
@@ -375,9 +375,11 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .sdot.planned { background: var(--plan); box-shadow: 0 0 10px var(--plan); }
 .sdot.none { background: #6c675f; }
 .games { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 20px; }
-.game { position: relative; aspect-ratio: 3 / 4; border-radius: 14px; outline: none; transition: transform 0.28s cubic-bezier(.2, .7, .2, 1), box-shadow 0.28s; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35); }
-.game:hover, .game:focus-visible { transform: scale(1.07); z-index: 2; box-shadow: 0 18px 44px rgba(0, 0, 0, 0.55); }
-.game:focus-visible { box-shadow: 0 0 0 3px var(--accent), 0 18px 44px rgba(0, 0, 0, 0.55); }
+.games { perspective: 900px; }
+.game { position: relative; aspect-ratio: 3 / 4; border-radius: 14px; outline: none; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35); transform: translateZ(0); transition: transform 0.45s cubic-bezier(.2, .9, .25, 1.15), box-shadow 0.35s; will-change: transform; }
+.game:hover, .game:focus-visible { transform: translateY(-10px) scale(1.14) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); z-index: 5; box-shadow: 0 28px 60px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 236, 210, 0.18); transition: transform 0.18s ease-out, box-shadow 0.35s; }
+.game[data-status="partial"]:hover, .game[data-status="full"]:hover { box-shadow: 0 28px 60px rgba(0, 0, 0, 0.7), 0 0 38px rgba(242, 165, 65, 0.35), 0 0 0 1px rgba(242, 165, 65, 0.6); }
+.game:focus-visible { box-shadow: 0 0 0 3px var(--accent), 0 28px 60px rgba(0, 0, 0, 0.7); }
 .game .cover { position: absolute; inset: 0; border-radius: inherit; overflow: hidden; border: 1px solid var(--line-2); background: linear-gradient(160deg, #1d1a1f, #121116); transition: filter 0.3s; }
 .game[data-status="planned"] .cover, .game[data-status="none"] .cover { filter: grayscale(1) brightness(0.72); }
 .game .ph { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; padding: 16px; text-align: center; }
@@ -387,7 +389,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .game .cover.has-art .ph { display: none; }
 .game .cover.has-art .art { display: block; }
 .game:hover .cover:not(.has-art) .ph > *, .game:focus-visible .cover:not(.has-art) .ph > * { opacity: 0; }
-.game .over { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; gap: 4px; padding: 44px 14px 14px; border-radius: 0 0 14px 14px; background: linear-gradient(to top, rgba(8, 8, 11, 0.96) 35%, rgba(8, 8, 11, 0)); opacity: 0; transform: translateY(8px); transition: opacity 0.25s, transform 0.25s; pointer-events: none; }
+.game .over { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; gap: 4px; padding: 44px 14px 14px; border-radius: 0 0 14px 14px; background: linear-gradient(to top, rgba(8, 8, 11, 0.97) 60%, rgba(8, 8, 11, 0)); opacity: 0; transform: translateY(8px); transition: opacity 0.25s, transform 0.25s; pointer-events: none; }
 .game:hover .over, .game:focus-visible .over { opacity: 1; transform: none; }
 .gname { font-weight: 700; font-size: 0.9rem; color: var(--ink); line-height: 1.25; }
 .gmeta { font-size: 0.78rem; color: var(--mute); }

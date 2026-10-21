@@ -9,7 +9,7 @@
   /* ------------------------------------------------------------ language */
 
   var ES = {
-    'nav.project': 'Proyecto', 'nav.how': 'Cómo funciona', 'nav.fps': 'Fotogramas', 'nav.status': 'Estado',
+    'nav.project': 'Proyecto', 'nav.games': 'Juegos', 'nav.how': 'Cómo funciona', 'nav.fps': 'Fotogramas', 'nav.status': 'Estado',
     'nav.roadmap': 'Hoja de ruta', 'nav.faq': 'Preguntas', 'nav.star': 'Estrella en GitHub',
     'hero.h1': 'Los Monster Hunter clásicos, ejecutándose de forma nativa en PC.',
     'hero.sub': 'MHForever es un proyecto de ports no oficiales hechos mediante recompilación estática. Freedom Unite se juega hoy y vendrán más juegos. Sin emulador, con cualquier mando y con un launcher que lo prepara todo a partir de tu propia copia.',
@@ -74,7 +74,7 @@
   };
 
   var JA = {
-    'nav.project': 'プロジェクト', 'nav.how': '使い方', 'nav.fps': 'フレームレート', 'nav.status': '現状',
+    'nav.project': 'プロジェクト', 'nav.games': '対応ゲーム', 'nav.how': '使い方', 'nav.fps': 'フレームレート', 'nav.status': '現状',
     'nav.roadmap': 'ロードマップ', 'nav.faq': 'よくある質問', 'nav.star': 'GitHubでスター',
     'hero.h1': '往年のモンスターハンターを、PCネイティブで。',
     'hero.sub': 'MHForeverは、静的再コンパイルで作る非公式ポートのプロジェクトです。今はFreedom Unite（日本版『モンスターハンターポータブル 2nd G』）が遊べ、今後ほかの作品も追加していきます。エミュレーターは使わず、好きなコントローラーで遊べて、ランチャーがお手持ちのゲームからセットアップをすべて行います。',
@@ -181,6 +181,19 @@
     probe.src = img.getAttribute('src');
   });
 
+  /* ------------------------------------------------------------ cover tilt: the hovered cover leans towards the pointer */
+
+  if (!reduce && window.matchMedia('(hover: hover)').matches) {
+    Array.prototype.forEach.call(document.querySelectorAll('.game'), function (g) {
+      g.addEventListener('pointermove', function (e) {
+        var r = g.getBoundingClientRect();
+        g.style.setProperty('--ry', (((e.clientX - r.left) / r.width) - 0.5) * 14 + 'deg');
+        g.style.setProperty('--rx', (0.5 - ((e.clientY - r.top) / r.height)) * 14 + 'deg');
+      });
+      g.addEventListener('pointerleave', function () { g.style.removeProperty('--rx'); g.style.removeProperty('--ry'); });
+    });
+  }
+
   /* ------------------------------------------------------------ latest release */
 
   var live = { rel: null, repo: null, ci: null };
@@ -248,7 +261,7 @@
 
   /* ------------------------------------------------------------ reveal on scroll */
 
-  var revealSel = '.head, .game, .rows .row, .table > div, .timeline li, .faq details, .demo, .vm > div, .final-in, .how > *';
+  var revealSel = '.head, .games, .rows .row, .table > div, .timeline li, .faq details, .demo, .vm > div, .final-in, .how > *';
   var targets = Array.prototype.slice.call(document.querySelectorAll(revealSel));
   if ('IntersectionObserver' in window && !reduce) {
     var io = new IntersectionObserver(function (es) {
