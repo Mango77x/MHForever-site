@@ -316,6 +316,7 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   .nav-in { gap: 10px; }
   .nav-end { gap: 8px; }
   .nav-end .btn.small span { display: none; }
+  .nav-end .discord-nav { display: none; } /* the hero has the same button right below */
   .nav-end .btn.small { padding: 0 12px; }
   .seg button { min-width: 36px; padding: 0 8px; }
   .brand b { font-size: 1.05rem; }
