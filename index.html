@@ -289,7 +289,7 @@
       <div class="head">
         <h2 data-i18n="fps.h">Smoother than the original</h2>
         <p class="lede" data-i18n="fps.p">The original game runs at 30 frames per second. Since version 0.2.0 MHForever can draw extra frames in between, up to 180 fps, so motion looks smoother on a fast screen. Compare the options.</p>
-        <p class="status-note"><span class="chip warn" data-i18n="fps.badge">Experimental</span> <span data-i18n="fps.note">Choose it in the launcher Settings. Busy scenes may not hold the highest rates. On a 60 Hz screen, anything above 60 looks the same as 60.</span></p>
+        <p class="status-note"><span class="chip warn" data-i18n="fps.badge">Experimental</span> <span data-i18n="fps.note">Choose it in the launcher Settings or in the in-game menu (press Esc). Busy scenes may not hold the highest rates. On a 60 Hz screen, anything above 60 looks the same as 60.</span></p>
       </div>
       <div class="demo">
         <div class="demo-top">
@@ -336,12 +336,14 @@
       </div>
       <dl class="table">
         <div><dt data-i18n="st.k1">Playable game</dt><dd data-i18n="st.v1">Monster Hunter Freedom Unite (PSP), European release, known in Japan as Monster Hunter Portable 2nd G. It is the only game for now.</dd></div>
-        <div><dt data-i18n="st.k2">Frame rate</dt><dd data-i18n="st.v2">30 fps like the original console, or 60 to 180 fps with frame interpolation (experimental).</dd></div>
+        <div><dt data-i18n="st.k2">Frame rate</dt><dd data-i18n="st.v2">30 fps like the original console, or 60 to 180 fps with frame interpolation (experimental). You can change it while playing.</dd></div>
         <div><dt data-i18n="st.k3">Online play</dt><dd data-i18n="st.v3">Not available yet. Internet multiplayer is being designed.</dd></div>
         <div><dt data-i18n="st.k4">Platforms</dt><dd data-i18n="st.v4">Windows, 64-bit. Linux and Steam Deck are planned.</dd></div>
         <div><dt data-i18n="st.k5">Controllers</dt><dd data-i18n="st.v5">Gamepads work out of the box. Tested with a PS5 DualSense. Other pads recognized by SDL should work.</dd></div>
-        <div><dt data-i18n="st.k6">Resolution</dt><dd data-i18n="st.v6">Several times the original 480×272, with an optional smoother texture filter.</dd></div>
+        <div><dt data-i18n="st.k6">Resolution</dt><dd data-i18n="st.v6">Up to 10 times the original 480×272, with an optional smoother texture filter. You can change it while playing.</dd></div>
         <div><dt data-i18n="st.k7">Other games and regions</dt><dd data-i18n="st.v7">The US and Japanese releases of Freedom Unite and other games of the series are planned.</dd></div>
+        <div><dt data-i18n="st.k8">In-game menu</dt><dd data-i18n="st.v8">Press Escape (or the controller's guide button) to pause: change the volume, resolution, frame rate and fullscreen without restarting. It works with the keyboard, a controller or the mouse.</dd></div>
+        <div><dt data-i18n="st.k9">Saves</dt><dd data-i18n="st.v9">The same format as the PSP and PPSSPP: import your own saves from a PSP or PPSSPP, and copy MHForever's saves into PPSSPP. Your own version of the game only.</dd></div>
       </dl>
     </div>
   </section>
@@ -377,6 +379,7 @@
         <li class="done"><span class="dot"></span><div><b data-i18n="rm.c">Launcher and Windows release</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
         <li class="now"><span class="dot"></span><div><b data-i18n="rm.d">Playable single-player</b><span class="tag" data-i18n="rm.now">In progress</span></div></li>
         <li class="done"><span class="dot"></span><div><b data-i18n="rm.e">Smoother frame rate, 60 fps and above</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
+        <li class="done"><span class="dot"></span><div><b data-i18n="rm.i">In-game menu and saves in the PSP format</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
         <li><span class="dot"></span><div><b data-i18n="rm.f">Online multiplayer</b><span class="tag" data-i18n="rm.plan">Planned</span></div></li>
         <li><span class="dot"></span><div><b data-i18n="rm.g">US and Japanese releases</b><span class="tag" data-i18n="rm.plan">Planned</span></div></li>
         <li><span class="dot"></span><div><b data-i18n="rm.h2">More games of the series, on PSP and beyond</b><span class="tag" data-i18n="rm.plan">Planned</span></div></li>
@@ -400,8 +403,9 @@
         <details><summary data-i18n="faq.q6">Does it work on Linux or Steam Deck?</summary><p data-i18n="faq.a6">Not yet. Both are planned.</p></details>
         <details><summary data-i18n="faq.q7">How do I report a bug?</summary><p data-i18n="faq.a7">Open an issue on GitHub with your version and what happened. Reports are welcome.</p></details>
         <details><summary data-i18n="faq.q8">Will I lose my saves when I update?</summary><p data-i18n="faq.a8">No. Saves live in Documents\MHForever\saves and your settings in %APPDATA%\MHForever, outside the program folder, so unzipping a new version never touches them. Saves from older versions that sat next to the program are copied over the first time you press Play.</p></details>
-        <details><summary data-i18n="faq.q9">Can I use saves from a real PSP?</summary><p data-i18n="faq.a9">Not yet. Importing saves from a real PSP is not supported.</p></details>
+        <details><summary data-i18n="faq.q9">Can I use saves from a real PSP or PPSSPP?</summary><p data-i18n="faq.a9">Yes, from your own version of the game (the European release for now). In the launcher Settings, under Saves, choose the folder that holds them. Your current save is kept in a backup folder. MHForever's saves also load in PPSSPP. A real PSP is not guaranteed to accept them.</p></details>
         <details><summary data-i18n="faq.q10">Which frame rates are available?</summary><p data-i18n="faq.a10">The original runs at 30 fps. In the launcher Settings you can pick 60 to 180 fps (any multiple of 30): the game still runs at 30 and extra pictures are drawn in between. It is experimental, and heavy scenes may not hold the highest rates.</p></details>
+        <details><summary data-i18n="faq.q11">Can I change graphics or sound while playing?</summary><p data-i18n="faq.a11">Yes. Press Escape in the game and a menu opens where you can change the volume, the resolution (up to 10x), the frame rate (30 to 180) and fullscreen without restarting.</p></details>
       </div>
     </div>
   </section>
@@ -434,6 +438,6 @@
   </div>
 </footer>
 
-<script src="app.js?v=5"></script>
+<script src="app.js?v=6"></script>
 </body>
 </html>
