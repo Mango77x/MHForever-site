@@ -70,11 +70,13 @@
     'faq.q4': '¿Es legal?', 'faq.a4': 'MHForever no contiene código ni recursos de Capcom ni de Sony y te pide usar tu propia copia. No está afiliado a Capcom ni a Sony. Esto no es asesoramiento legal y las leyes cambian según el país.',
     'faq.q5': '¿Puedo jugar en línea con amigos?', 'faq.a5': 'Todavía no. El multijugador por internet se está diseñando para que puedas cazar con amigos sin una PSP.',
     'faq.q6': '¿Funciona en Linux o en Steam Deck?', 'faq.a6': 'Todavía no. Ambos están planeados.',
-    'faq.q7': '¿Cómo reporto un fallo?', 'faq.a7': 'Abre una issue en GitHub con tu versión y lo que pasó. Los reportes son bienvenidos.',
+    'faq.q7': '¿Cómo reporto un fallo?', 'faq.a7': 'Abre una issue en GitHub con tu versión y lo que pasó, o pregunta en el Discord. Los reportes son bienvenidos.',
     'faq.q8': '¿Perderé mis partidas al actualizar?', 'faq.a8': 'No. Las partidas se guardan en Documents\\MHForever\\saves y tus ajustes en %APPDATA%\\MHForever, fuera de la carpeta del programa, así que descomprimir una versión nueva nunca las toca. Las partidas de versiones anteriores que estaban junto al programa se copian la primera vez que pulsas Play.',
     'faq.q9': '¿Puedo usar partidas de una PSP real o de PPSSPP?', 'faq.a9': 'Sí, de tu propia versión del juego (por ahora la europea). En los Ajustes del launcher, en Saves, elige la carpeta que las contiene. Tu partida actual se guarda en una copia de seguridad. Las partidas de MHForever también se cargan en PPSSPP. En una PSP real no está garantizado.',
     'faq.q10': '¿Qué tasas de fotogramas hay?', 'faq.a10': 'El original va a 30 fps. En los Ajustes del launcher puedes elegir de 60 a 180 fps (cualquier múltiplo de 30): el juego sigue a 30 y se dibujan imágenes intermedias. Es experimental y las escenas pesadas pueden no mantener las tasas más altas.',
     'faq.q11': '¿Puedo cambiar los gráficos o el sonido mientras juego?', 'faq.a11': 'Sí. Pulsa Escape en el juego y se abre un menú donde cambias el volumen, la resolución (hasta 10×), los fotogramas (de 30 a 180) y la pantalla completa sin reiniciar.',
+    'end.discord': 'Únete al Discord',
+    'faq.q12': '¿Hay una comunidad?', 'faq.a12': 'Sí, un servidor de Discord para pedir ayuda, reportar fallos, hacer sugerencias y seguir las novedades. Trae tu propia copia del juego: allí no se habla de piratería.',
     'end.h': '¿Listo para cazar?', 'end.p': 'Descarga el launcher, añade tu propia copia y pulsa Jugar.',
     'foot.legal': 'MHForever es un proyecto de fans no oficial. No está afiliado, respaldado ni patrocinado por Capcom ni por Sony. Monster Hunter es una marca de su propietario y se usa aquí solo para describir con qué juegos funciona el proyecto.'
   };
@@ -141,11 +143,13 @@
     'faq.q4': '合法ですか？', 'faq.a4': 'MHForeverにはCapcomやSonyのコードやデータは含まれず、ご自身のコピーを使う前提です。CapcomおよびSonyとは無関係です。これは法的助言ではなく、法律は国によって異なります。',
     'faq.q5': 'フレンドとオンラインで遊べますか？', 'faq.a5': 'まだです。PSPがなくてもフレンドと狩りに行けるよう、インターネット対戦を設計中です。',
     'faq.q6': 'LinuxやSteam Deckで動きますか？', 'faq.a6': 'まだです。どちらも予定しています。',
-    'faq.q7': '不具合はどう報告すればいいですか？', 'faq.a7': 'バージョンと状況を添えて、GitHubでissueを開いてください。報告をお待ちしています。',
+    'faq.q7': '不具合はどう報告すればいいですか？', 'faq.a7': 'バージョンと状況を添えて、GitHubでissueを開くか、Discordで質問してください。報告をお待ちしています。',
     'faq.q8': 'アップデートするとセーブデータは消えますか？', 'faq.a8': 'いいえ。セーブデータは Documents\\MHForever\\saves に、設定は %APPDATA%\\MHForever に保存され、プログラムのフォルダの外にあるため、新しいバージョンを展開しても影響を受けません。プログラムの横にあった古いバージョンのセーブデータは、初めて「Play」を押したときにコピーされます。',
     'faq.q9': '実機PSPやPPSSPPのセーブデータは使えますか？', 'faq.a9': 'はい、お手持ちと同じバージョンのゲーム（今は欧州版）のものなら使えます。ランチャーの設定の Saves で、セーブデータのあるフォルダーを選んでください。いまのセーブデータはバックアップフォルダーに残ります。MHForeverのセーブデータはPPSSPPでも読み込めます。実機PSPで読み込めるかどうかは保証できません。',
     'faq.q10': '選べるフレームレートは？', 'faq.a10': 'オリジナルは30fpsです。ランチャーの設定で、30の倍数の60〜180fpsを選べます。ゲーム自体は30のままで、間のフレームを追加で描きます。試験的な機能で、負荷の高い場面では最高レートを維持できないことがあります。',
     'faq.q11': 'プレイ中に画質や音量を変えられますか？', 'faq.a11': 'はい。ゲーム中にEscを押すとメニューが開き、音量、解像度（最大10倍）、フレームレート（30〜180）、フルスクリーンを再起動なしで変更できます。',
+    'end.discord': 'Discordに参加',
+    'faq.q12': 'コミュニティはありますか？', 'faq.a12': 'はい、ヘルプ、不具合の報告、提案、リリース情報のためのDiscordサーバーがあります。ゲームはご自身のコピーをご用意ください。海賊版の話題は禁止です。',
     'end.h': '狩りの準備はできましたか？', 'end.p': 'ランチャーをダウンロードし、お手持ちのコピーを追加して、プレイを押すだけです。',
     'foot.legal': 'MHForeverは非公式のファンプロジェクトです。CapcomおよびSonyとは提携・承認・後援の関係にありません。Monster Hunterは各権利者の商標であり、このプロジェクトが対応するゲームを説明する目的でのみ使用しています。'
   };
