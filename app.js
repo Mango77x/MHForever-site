@@ -32,7 +32,7 @@
     'what.r3h': 'Hecho para crecer',
     'what.r3p': 'Cada juego es un módulo sobre un runtime común. Freedom Unite es el primero. Se planean más juegos y regiones.',
     'how.h': 'De tu imagen de disco a jugar', 'how.p': 'Cuatro pasos, todos dentro del launcher. Sin herramientas de desarrollo.',
-    'how.s1h': 'Descarga y descomprime', 'how.s1p': 'Baja el zip de la página de Releases y descomprímelo donde quieras.',
+    'how.s1h': 'Descarga y descomprime', 'how.s1p': 'Baja de la página de Releases el archivo de tu sistema (zip para Windows, tar.gz para Linux) y descomprímelo donde quieras.',
     'how.s2h': 'Añade tu copia', 'how.s2p': 'Abre MHForever.exe y elige tu propio .iso de Freedom Unite, una imagen normal y sin comprimir de tu UMD.',
     'how.s3h': 'Deja que lo compruebe y lo prepare', 'how.s3p': 'El launcher verifica tu copia y prepara en tu PC lo que el juego necesita. También puede guardar una copia de la imagen en su propia carpeta.',
     'how.s4h': 'Pulsa Jugar', 'how.s4p': 'Los mandos funcionan sin configurar y hay teclas por defecto para teclado.',
@@ -48,7 +48,7 @@
     'st.k1': 'Juego jugable', 'st.v1': 'Monster Hunter Freedom Unite (PSP), edición europea, conocido en Japón como Monster Hunter Portable 2nd G. Por ahora es el único juego.',
     'st.k2': 'Fotogramas', 'st.v2': '30 fps como la consola original, o de 60 a 180 fps con interpolación de fotogramas (experimental). Se puede cambiar mientras juegas.',
     'st.k3': 'Juego en línea', 'st.v3': 'Todavía no está disponible. El multijugador por internet se está diseñando.',
-    'st.k4': 'Plataformas', 'st.v4': 'Windows de 64 bits. Linux y Steam Deck están planeados.',
+    'st.k4': 'Plataformas', 'st.v4': 'Windows y Linux de 64 bits. Steam Deck sin probar.',
     'st.k5': 'Mandos', 'st.v5': 'Los mandos funcionan sin configurar. Probado con un DualSense de PS5. Otros mandos que reconozca SDL deberían funcionar.',
     'st.k6': 'Resolución', 'st.v6': 'Hasta 10 veces los 480×272 originales, con un filtro de texturas más suave opcional. Se puede cambiar mientras juegas.',
     'st.k7': 'Otros juegos y regiones', 'st.v7': 'Se planean las ediciones de EE. UU. y Japón de Freedom Unite y otros juegos de la saga.',
@@ -61,7 +61,7 @@
     'rm.link': 'Leer la hoja de ruta completa',
     'rm.a': 'Runtime de PSP y recompilador', 'rm.b': 'Freedom Unite llega al menú principal', 'rm.c': 'Launcher y versión para Windows',
     'rm.d': 'Un jugador totalmente jugable', 'rm.e': 'Más fluidez, 60 fps y más', 'rm.f': 'Multijugador en línea',
-    'rm.i': 'Menú en el juego y partidas en formato PSP', 'rm.g': 'Ediciones de EE. UU. y Japón', 'rm.h2': 'Más juegos de la saga, en PSP y más allá',
+    'rm.i': 'Menú en el juego y partidas en formato PSP', 'hero.cta1l': 'Descargar para Linux', 'live.altl': 'Descarga para Linux', 'live.altw': 'Descarga para Windows', 'rm.j': 'Versión para Linux', 'rm.g': 'Ediciones de EE. UU. y Japón', 'rm.h2': 'Más juegos de la saga, en PSP y más allá',
     'rm.done': 'Hecho', 'rm.now': 'En curso', 'rm.test': 'En pruebas', 'rm.plan': 'Planeado',
     'faq.h': 'Preguntas', 'faq.p': 'Respuestas cortas a lo que más se pregunta.',
     'faq.q1': '¿Necesito tener el juego?', 'faq.a1': 'Sí. MHForever requiere tu propia copia legítima de Freedom Unite. No se incluye ni se descarga ningún recurso del juego.',
@@ -69,7 +69,7 @@
     'faq.q3': '¿Es un emulador?', 'faq.a3': 'No. El programa del juego se recompila a código nativo de PC y los servicios del sistema de la consola se reimplementan. Obtienes un programa normal de Windows.',
     'faq.q4': '¿Es legal?', 'faq.a4': 'MHForever no contiene código ni recursos de Capcom ni de Sony y te pide usar tu propia copia. No está afiliado a Capcom ni a Sony. Esto no es asesoramiento legal y las leyes cambian según el país.',
     'faq.q5': '¿Puedo jugar en línea con amigos?', 'faq.a5': 'Todavía no. El multijugador por internet se está diseñando para que puedas cazar con amigos sin una PSP.',
-    'faq.q6': '¿Funciona en Linux o en Steam Deck?', 'faq.a6': 'Todavía no. Ambos están planeados.',
+    'faq.q6': '¿Funciona en Linux o en Steam Deck?', 'faq.a6': 'Linux sí: desde la 0.4.1 hay una descarga para Linux junto a la de Windows (necesita WebKitGTK 4.1 y GTK 3 y se compila en Ubuntu 24.04, así que distribuciones muy antiguas pueden no ejecutarla). Steam Deck todavía no se ha probado; los reportes son bienvenidos.',
     'faq.q7': '¿Cómo reporto un fallo?', 'faq.a7': 'Abre una issue en GitHub con tu versión y lo que pasó, o pregunta en el Discord. Los reportes son bienvenidos.',
     'faq.q8': '¿Perderé mis partidas al actualizar?', 'faq.a8': 'No. Las partidas se guardan en Documents\\MHForever\\saves y tus ajustes en %APPDATA%\\MHForever, fuera de la carpeta del programa, así que descomprimir una versión nueva nunca las toca. Las partidas de versiones anteriores que estaban junto al programa se copian la primera vez que pulsas Play.',
     'faq.q9': '¿Puedo usar partidas de una PSP real o de PPSSPP?', 'faq.a9': 'Sí, de tu propia versión del juego (por ahora la europea). En los Ajustes del launcher, en Saves, elige la carpeta que las contiene. Tu partida actual se guarda en una copia de seguridad. Las partidas de MHForever también se cargan en PPSSPP. En una PSP real no está garantizado.',
@@ -105,7 +105,7 @@
     'what.r3h': '拡張を前提に',
     'what.r3p': 'ゲームごとに、共通のランタイム上のモジュールとして作られます。最初のゲームはFreedom Uniteで、今後ほかのゲームや地域も予定しています。',
     'how.h': 'ディスクイメージからプレイまで', 'how.p': '手順は4つ。すべてランチャーの中で完結し、開発ツールは不要です。',
-    'how.s1h': 'ダウンロードして展開', 'how.s1p': 'Releasesページからzipを入手し、好きな場所に展開します。',
+    'how.s1h': 'ダウンロードして展開', 'how.s1p': 'Releasesページからお使いの環境のファイル（Windowsはzip、Linuxはtar.gz）を入手し、好きな場所に展開します。',
     'how.s2h': 'コピーを追加', 'how.s2p': 'MHForever.exe を開き、お手持ちのFreedom Uniteの .iso（UMDを圧縮せずに吸い出した通常のイメージ）を選びます。',
     'how.s3h': '確認と準備を任せる', 'how.s3p': 'ランチャーがコピーを検証し、ゲームに必要なものをお使いのPC上で準備します。イメージのコピーを専用フォルダに保存することもできます。',
     'how.s4h': 'プレイを押す', 'how.s4p': 'ゲームパッドは設定なしで使え、キーボードの初期設定も用意されています。',
@@ -121,7 +121,7 @@
     'st.k1': 'プレイできるゲーム', 'st.v1': 'Monster Hunter Freedom Unite（PSP）欧州版。日本では『モンスターハンターポータブル 2nd G』。今のところ唯一のゲームです。',
     'st.k2': 'フレームレート', 'st.v2': 'オリジナルの本体と同じ30fps、またはフレーム補間による60〜180fps（試験的）。プレイ中に切り替えられます。',
     'st.k3': 'オンラインプレイ', 'st.v3': 'まだ利用できません。インターネット対戦を設計中です。',
-    'st.k4': 'プラットフォーム', 'st.v4': 'Windows（64ビット）。LinuxとSteam Deckは予定しています。',
+    'st.k4': 'プラットフォーム', 'st.v4': 'WindowsとLinux（64ビット）。Steam Deckは未検証です。',
     'st.k5': 'コントローラー', 'st.v5': 'ゲームパッドは設定なしで使えます。PS5 DualSenseで動作確認済み。SDLが認識するほかのパッドも動くはずです。',
     'st.k6': '解像度', 'st.v6': 'オリジナルの480×272の最大10倍。より滑らかなテクスチャフィルターも選べます。プレイ中に変更できます。',
     'st.k7': 'ほかのゲームと地域', 'st.v7': 'Freedom Uniteの北米版・日本版や、シリーズのほかのゲームを予定しています。',
@@ -134,7 +134,7 @@
     'rm.link': '完全なロードマップを読む',
     'rm.a': 'PSPランタイムとリコンパイラー', 'rm.b': 'Freedom Uniteがメインメニューまで到達', 'rm.c': 'ランチャーとWindows版リリース',
     'rm.d': 'シングルプレイを遊べる状態に', 'rm.e': 'よりなめらかなフレームレート（60fps以上）', 'rm.f': 'オンラインマルチプレイ',
-    'rm.i': 'ゲーム内メニューとPSP形式のセーブデータ', 'rm.g': '北米版・日本版', 'rm.h2': 'シリーズのほかのゲーム（PSPとその先へ）',
+    'rm.i': 'ゲーム内メニューとPSP形式のセーブデータ', 'hero.cta1l': 'Linux版をダウンロード', 'live.altl': 'Linux版', 'live.altw': 'Windows版', 'rm.j': 'Linux版のリリース', 'rm.g': '北米版・日本版', 'rm.h2': 'シリーズのほかのゲーム（PSPとその先へ）',
     'rm.done': '完了', 'rm.now': '取り組み中', 'rm.test': 'テスト中', 'rm.plan': '予定',
     'faq.h': 'よくある質問', 'faq.p': 'よく聞かれることへの短い答えです。',
     'faq.q1': 'ゲームを持っている必要がありますか？', 'faq.a1': 'はい。MHForeverにはFreedom Uniteの正規のコピーが必要です。ゲームのデータは同梱もダウンロードもされません。',
@@ -142,7 +142,7 @@
     'faq.q3': 'エミュレーターですか？', 'faq.a3': 'いいえ。ゲームのプログラムをPC向けのネイティブコードに再コンパイルし、本体のシステム機能を再実装しています。通常のWindowsプログラムとして動きます。',
     'faq.q4': '合法ですか？', 'faq.a4': 'MHForeverにはCapcomやSonyのコードやデータは含まれず、ご自身のコピーを使う前提です。CapcomおよびSonyとは無関係です。これは法的助言ではなく、法律は国によって異なります。',
     'faq.q5': 'フレンドとオンラインで遊べますか？', 'faq.a5': 'まだです。PSPがなくてもフレンドと狩りに行けるよう、インターネット対戦を設計中です。',
-    'faq.q6': 'LinuxやSteam Deckで動きますか？', 'faq.a6': 'まだです。どちらも予定しています。',
+    'faq.q6': 'LinuxやSteam Deckで動きますか？', 'faq.a6': 'Linuxは動きます。0.4.1からWindows版と並んでLinux版を配布しています（WebKitGTK 4.1とGTK 3が必要で、Ubuntu 24.04でビルドしているため、非常に古いディストリビューションでは動かない場合があります）。Steam Deckはまだ試していません。報告を歓迎します。',
     'faq.q7': '不具合はどう報告すればいいですか？', 'faq.a7': 'バージョンと状況を添えて、GitHubでissueを開くか、Discordで質問してください。報告をお待ちしています。',
     'faq.q8': 'アップデートするとセーブデータは消えますか？', 'faq.a8': 'いいえ。セーブデータは Documents\\MHForever\\saves に、設定は %APPDATA%\\MHForever に保存され、プログラムのフォルダの外にあるため、新しいバージョンを展開しても影響を受けません。プログラムの横にあった古いバージョンのセーブデータは、初めて「Play」を押したときにコピーされます。',
     'faq.q9': '実機PSPやPPSSPPのセーブデータは使えますか？', 'faq.a9': 'はい、お手持ちと同じバージョンのゲーム（今は欧州版）のものなら使えます。ランチャーの設定の Saves で、セーブデータのあるフォルダーを選んでください。いまのセーブデータはバックアップフォルダーに残ります。MHForeverのセーブデータはPPSSPPでも読み込めます。実機PSPで読み込めるかどうかは保証できません。',
@@ -155,9 +155,16 @@
   };
 
   var DICT = { es: ES, ja: JA };
+  var isLinux = /Linux|X11/i.test(navigator.userAgent) && !/Android/i.test(navigator.userAgent);
+  if (isLinux) {
+    Array.prototype.forEach.call(document.querySelectorAll('[data-i18n="hero.cta1"]'), function (n) {
+      n.setAttribute('data-i18n', 'hero.cta1l'); n.textContent = 'Download for Linux';
+    });
+  }
   var nodes = Array.prototype.slice.call(document.querySelectorAll('[data-i18n]'));
   var EN = {};
   nodes.forEach(function (n) { EN[n.getAttribute('data-i18n')] = n.textContent; });
+  EN['live.altw'] = 'Windows download';
   var lang = 'en';
   var version = '';
 
@@ -228,10 +235,24 @@
     if (rel) {
       $('liveVer').textContent = String(rel.tag_name).replace(/^v/, '');
       $('liveDate').textContent = rel.published_at ? fmtDate(rel.published_at) : '';
-      var asset = (rel.assets || []).filter(function (a) { return /\.zip$/i.test(a.name); })[0];
+      var assets = rel.assets || [];
+      var win = assets.filter(function (a) { return /\.zip$/i.test(a.name); })[0];
+      var lin = assets.filter(function (a) { return /\.tar\.gz$/i.test(a.name); })[0];
+      var asset = (isLinux && lin) || win || lin;
+      var alt = asset === lin ? win : lin;
       if (asset) {
         Array.prototype.forEach.call(document.querySelectorAll('.dl-latest'), function (a) { a.href = asset.browser_download_url; });
         $('liveSize').textContent = fmtSize(asset.size);
+      }
+      var altEl = $('liveAlt');
+      if (altEl) {
+        altEl.style.display = alt ? '' : 'none';
+        if (alt) {
+          altEl.href = alt.browser_download_url;
+          var k = alt === lin ? 'live.altl' : 'live.altw';
+          altEl.setAttribute('data-i18n', k);
+          altEl.textContent = (DICT[lang] && DICT[lang][k]) || (alt === lin ? 'Linux download' : 'Windows download');
+        }
       }
       if (rel.html_url) $('liveNotes').href = rel.html_url;
     }
