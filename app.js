@@ -88,7 +88,10 @@
     'rm.n': 'Interpolación más fluida y packs de texturas HD',
     'rm.o': 'Freedom Unite completo',
     'faq.q13': '¿Puedo usar packs de texturas HD?',
-    'faq.a13': 'Sí, desde la 0.8.2. Funcionan los packs hechos para PPSSPP (una carpeta con un textures.ini e imágenes PNG o KTX2), como KHD. Descarga uno, descomprímelo y elige su carpeta en los Ajustes del juego del launcher (Game settings → Texture pack): el launcher te muestra lo que tiene para tu edición y después lo copia o lo usa donde está. No se incluye ningún pack.'
+    'faq.a13': 'Sí, desde la 0.8.2. Funcionan los packs hechos para PPSSPP (una carpeta con un textures.ini e imágenes PNG o KTX2), como KHD. Descarga uno, descomprímelo y elige su carpeta en los Ajustes del juego del launcher (Game settings → Texture pack): el launcher te muestra lo que tiene para tu edición y después lo copia o lo usa donde está. No se incluye ningún pack.',
+    'st.k12': 'Mejoras',
+    'st.v12': 'Todo opcional: pantalla panorámica, texto en HD, sombras proyectadas, packs de texturas HD, cámara con stick analógico y ratón, HUD más pequeño, y la traducción FUComplete como copia propia.',
+    'rm.q': 'Pantalla panorámica, texto en HD y sombras proyectadas'
   };
 
   var JA = {
@@ -171,7 +174,10 @@
     'rm.n': 'より滑らかなフレーム補間とHDテクスチャパック',
     'rm.o': 'Freedom Unite 完成',
     'faq.q13': 'HDテクスチャパックは使えますか？',
-    'faq.a13': 'はい、0.8.2から使えます。PPSSPP向けに作られたパック（textures.iniとPNGまたはKTX2画像の入ったフォルダー）、たとえばKHDに対応しています。ダウンロードして展開し、ランチャーのゲーム設定（Game settings → Texture pack）でフォルダーを選んでください。お使いの版向けの内容が表示され、コピーするかその場所のまま使うかを選べます。パックは同梱されていません。'
+    'faq.a13': 'はい、0.8.2から使えます。PPSSPP向けに作られたパック（textures.iniとPNGまたはKTX2画像の入ったフォルダー）、たとえばKHDに対応しています。ダウンロードして展開し、ランチャーのゲーム設定（Game settings → Texture pack）でフォルダーを選んでください。お使いの版向けの内容が表示され、コピーするかその場所のまま使うかを選べます。パックは同梱されていません。',
+    'st.k12': '拡張機能',
+    'st.v12': 'すべて任意：ワイド画面、HDテキスト、投影シャドウ、HDテクスチャパック、アナログ・マウスカメラ、小さいHUD、FUComplete翻訳版を独立したコピーとして。',
+    'rm.q': 'ワイド画面、HDテキスト、投影シャドウ'
   };
 
   var DICT = { es: ES, ja: JA };
