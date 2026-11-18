@@ -84,7 +84,7 @@
     <div class="wrap hero-grid">
       <div class="hero-copy">
         <h1 data-i18n="hero.h1">The classic Monster Hunter games, running natively on PC.</h1>
-        <p class="lede" data-i18n="hero.sub">MHForever is a multi-game project of unofficial native PC ports made by static recompilation. It currently supports Freedom Unite (European, North American and Japanese releases) and Monster Hunter Freedom (European release). Online play is experimental. More games will follow. No emulator, any controller, and a launcher that sets everything up from your own copy.</p>
+        <p class="lede" data-i18n="hero.sub">MHForever is a multi-game platform of unofficial native PC ports made by static recompilation. Currently playable: Freedom Unite (EU, NA and JP) and Monster Hunter Freedom (EU). More games are planned.</p>
         <div class="cta-row">
           <a class="btn primary dl-win" id="dl" href="https://github.com/Mango77x/MHForever/releases/latest" rel="noopener">
             <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
@@ -104,9 +104,7 @@
           <li class="chip ok" data-i18n="hero.chip1">Two games playable</li>
           <li class="chip" data-i18n="hero.chip2">MHFU: EU, NA, JP · MHF1: EU</li>
           <li class="chip" data-i18n="hero.chip5">Experimental online play</li>
-          <li class="chip ok" data-i18n="hero.chip6">HD texture packs</li>
           <li class="chip" id="ver" data-i18n="hero.chip3">Latest release on GitHub</li>
-          <li class="chip" data-i18n="hero.chip4">Open source, GPL-3.0</li>
         </ul>
         <p class="fine" data-i18n="hero.note">Requires your own copy of the game. No game files are included or downloaded.</p>
       </div>
@@ -157,10 +155,6 @@
         <div class="row">
           <h3 data-i18n="what.r2h">Your copy, your files</h3>
           <p data-i18n="what.r2p">MHForever never includes or downloads game assets. Everything is read from the disc image you provide, and your saves stay on your computer.</p>
-        </div>
-        <div class="row">
-          <h3 data-i18n="what.r3h">Built to grow</h3>
-          <p data-i18n="what.r3p">Each game is a module on a shared runtime. MHForever currently supports Freedom Unite across its European, North American and Japanese releases, plus Monster Hunter Freedom in its European release. More titles are planned.</p>
         </div>
       </div>
     </div>
@@ -330,7 +324,7 @@
     <div class="wrap two">
       <div class="head">
         <h2 data-i18n="st.h">Where the project is today</h2>
-        <p class="lede" data-i18n="st.p">Freedom Unite is fully playable across its three releases, and Monster Hunter Freedom is playable in its European release. Online play is experimental. If anything looks or behaves differently from the original, please report it.</p>
+        
         <a class="btn ghost" href="https://github.com/Mango77x/MHForever/issues" rel="noopener" data-i18n="st.issue">Report a problem</a>
         <div class="live" id="live" aria-live="polite">
           <p class="live-k" data-i18n="live.k">Latest release</p>
@@ -349,21 +343,7 @@
           <p class="live-src" data-i18n="live.src">Read live from GitHub.</p>
         </div>
       </div>
-      <dl class="table">
-        <div><dt data-i18n="st.k1">Game</dt><dd data-i18n="st.v1">Monster Hunter Freedom Unite (PSP): European (ULES01213), North American (ULUS10391) and Japanese (Monster Hunter Portable 2nd G, ULJM05500) releases. Monster Hunter Freedom (MHF1): European release (ULES00318), with the Freedom DX v1.8.6 patch also supported. Each game copy keeps its own settings.</dd></div>
-        <div><dt data-i18n="st.k2">Frame rate</dt><dd data-i18n="st.v2">Freedom Unite runs at 30 fps natively or 60–180 fps with frame interpolation. MHF1 currently runs at 30 fps; its frame interpolation support is included in the upcoming release. You can change the setting while playing.</dd></div>
-        <div><dt data-i18n="st.k3">Online play</dt><dd data-i18n="st.v3">Online play is experimental. It uses the same ad hoc servers as PPSSPP, so MHForever players can hunt with other MHForever and PPSSPP players. Friend codes, presence, invites and private rooms are available from the launcher or in-game menu.</dd></div>
-        <div><dt data-i18n="st.k4">Platforms</dt><dd data-i18n="st.v4">Windows and Linux, 64-bit. Players have reported it working on the Steam Deck (SteamOS); the maintainers have no Deck to test on.</dd></div>
-        <div><dt data-i18n="st.k5">Controllers</dt><dd data-i18n="st.v5">Gamepads work out of the box. Tested with a PS5 DualSense. Other pads recognized by SDL should work.</dd></div>
-        <div><dt data-i18n="st.k10">HD textures</dt><dd data-i18n="st.v10">Texture packs made for PPSSPP, such as KHD, replace the game's textures with sharper ones (since 0.8.2). Choose one per copy of the game in Game settings and turn it off and on while playing. It works with the European, North American and Japanese releases. No pack is included: you download the one you like.</dd></div>
-        <div><dt data-i18n="st.k6">Resolution</dt><dd data-i18n="st.v6">Up to 10 times the original 480×272, with an optional smoother texture filter. You can change it while playing.</dd></div>
-        <div><dt data-i18n="st.k7">Other games</dt><dd data-i18n="st.v7">Freedom Unite and Monster Hunter Freedom are currently playable. More Monster Hunter titles are planned.</dd></div>
-        <div><dt data-i18n="st.k8">In-game menu</dt><dd data-i18n="st.v8">Press Escape (or the controller's guide button) to open it over the game, which keeps running: change the volume, resolution, frame rate and fullscreen without restarting. It works with the keyboard, a controller or the mouse.</dd></div>
-        <div><dt data-i18n="st.k11">Updates</dt><dd data-i18n="st.v11">The launcher updates itself (since 0.7): when a new version is out, one click on "Update now" downloads it, checks it and restarts. Your saves and settings are never touched.</dd></div>
-        <div><dt data-i18n="st.k9">Saves</dt><dd data-i18n="st.v9">The same format as the PSP and PPSSPP: import your own saves from a PSP or PPSSPP, and copy MHForever's saves into PPSSPP. Your own version of the game only.</dd></div>
-        <div><dt data-i18n="st.k12">Enhancements</dt><dd data-i18n="st.v12">All optional: widescreen, HD text, projected shadows, HD texture packs, analog and mouse camera, a smaller HUD, and the FUComplete translation as its own copy.</dd></div>
-      </dl>
-    </div>
+  </div>
   </section>
 
   <!-- ------------------------------------------------------------ roadmap -->
@@ -376,22 +356,10 @@
       </div>
       <ol class="timeline">
         <li class="done"><span class="dot"></span><div><b data-i18n="rm.a">PSP runtime and recompiler</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
-        <li class="done"><span class="dot"></span><div><b data-i18n="rm.b">Freedom Unite reaches the main menu</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
-        <li class="done"><span class="dot"></span><div><b data-i18n="rm.c">Launcher and Windows release</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
-        <li class="done"><span class="dot"></span><div><b data-i18n="rm.j">Linux release</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
-        <li class="done"><span class="dot"></span><div><b data-i18n="rm.d">Playable single-player</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
-        <li class="done"><span class="dot"></span><div><b data-i18n="rm.e">Smoother frame rate, 60 fps and above</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
-        <li class="done"><span class="dot"></span><div><b data-i18n="rm.i">In-game menu and saves in the PSP format</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
-        <li class="done"><span class="dot"></span><div><b data-i18n="rm.g">North American release</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
-        <li class="done"><span class="dot"></span><div><b data-i18n="rm.f">Online play on community servers</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
-        <li class="done"><span class="dot"></span><div><b data-i18n="rm.m">Japanese release, launcher that updates itself</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
-        <li class="done"><span class="dot"></span><div><b data-i18n="rm.k">Friends, private rooms and invites</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
-        <li class="done"><span class="dot"></span><div><b data-i18n="rm.q">Widescreen, HD text and projected shadows</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
-        <li class="done"><span class="dot"></span><div><b data-i18n="rm.n">Smoother frame interpolation and HD texture packs</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
+        <li class="done"><span class="dot"></span><div><b data-i18n="rm.j">Windows and Linux releases</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
         <li class="done"><span class="dot"></span><div><b data-i18n="rm.o">Freedom Unite and Freedom playable</b><span class="tag" data-i18n="rm.done">Done</span></div></li>
         <li><span class="dot"></span><div><b data-i18n="rm.h2">More games of the series, on PSP and beyond</b><span class="tag" data-i18n="rm.plan">Planned</span></div></li>
-      </ol>
-    </div>
+      </ol>   </div>
   </section>
 
   <!-- ------------------------------------------------------------ faq -->
