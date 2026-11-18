@@ -406,3 +406,28 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .game[data-status="partial"] .cover, .game[data-status="full"] .cover { background: linear-gradient(160deg, #3a2a1a, #17120f 70%); border-color: rgba(242, 165, 65, 0.45); }
 .game[data-status="partial"] .ph b, .game[data-status="full"] .ph b { color: var(--accent); }
 .gsup { color: var(--accent); }
+
+
+/* ------------------------------------------------------------ project status + live release notes */
+.status-layout { grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); align-items: start; }
+.status-summary { position: static; }
+.status-summary > .btn { margin-top: 22px; }
+.status-summary .live { max-width: none; margin-top: 24px; }
+.release-panel {
+  min-width: 0; padding: clamp(22px, 3vw, 34px); border: 1px solid var(--line-2);
+  border-radius: 20px; background: rgba(24, 22, 20, 0.48);
+}
+.release-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 18px; padding-bottom: 18px; border-bottom: 1px solid var(--line-2); }
+.release-head h3 { margin-top: 5px; font-size: clamp(1.2rem, 2vw, 1.55rem); }
+.release-full { flex: none; color: var(--accent); font-size: .9rem; font-weight: 700; text-decoration: none; }
+.release-full:hover { text-decoration: underline; }
+.release-notes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; padding-top: 18px; }
+.release-notes section { min-width: 0; }
+.release-notes h4 { margin: 0 0 10px; color: var(--accent); font-family: var(--display); font-size: .95rem; }
+.release-notes ul { margin: 0; padding-left: 18px; color: var(--ink-2); font-size: .94rem; }
+.release-notes li + li { margin-top: 10px; }
+.release-loading { color: var(--mute); }
+@media (max-width: 760px) {
+  .status-layout { grid-template-columns: 1fr; gap: 28px; }
+  .release-notes { grid-template-columns: 1fr; }
+}

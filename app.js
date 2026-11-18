@@ -44,7 +44,7 @@
     'st.h': 'Actividad del proyecto',
     'st.p': 'Freedom Unite es totalmente jugable en sus tres ediciones y Monster Hunter Freedom también se puede jugar en su edición europea. El juego en línea es experimental. Si algo se ve o se comporta distinto que en el original, repórtalo.',
     'st.issue': 'Reportar un problema',
-    'live.k': 'Última versión', 'live.dl': 'Descargar', 'live.notes': 'Notas de la versión', 'live.stars': 'Estrellas', 'live.commit': 'Última actualización', 'live.issues': 'Issues abiertas', 'live.ci': 'Compilación', 'ci.pass': 'Correcta', 'ci.fail': 'Fallando', 'ci.run': 'En curso', 'live.src': 'Datos leídos en directo desde GitHub.',
+    'live.k': 'Última versión', 'live.dl': 'Descargar', 'live.notes': 'Notas de la versión', 'live.changes': 'Novedades de la última versión', 'live.full': 'Notas completas', 'live.loading': 'Cargando notas de la versión…', 'live.empty': 'No hay notas de la versión disponibles.', 'live.stars': 'Estrellas', 'live.commit': 'Última actualización', 'live.issues': 'Issues abiertas', 'live.ci': 'Compilación', 'ci.pass': 'Correcta', 'ci.fail': 'Fallando', 'ci.run': 'En curso', 'live.src': 'Datos leídos en directo desde GitHub.',
     'st.k1': 'Juegos', 'st.v1': 'Monster Hunter Freedom Unite (PSP): ediciones europea (ULES01213), norteamericana (ULUS10391) y japonesa (Monster Hunter Portable 2nd G, ULJM05500). Monster Hunter Freedom (MHF1): edición europea (ULES00318), también compatible con el parche Freedom DX v1.8.6. Cada copia guarda sus propios ajustes.',
     'st.k2': 'Fotogramas', 'st.v2': 'Freedom Unite funciona a 30 fps nativos o de 60 a 180 fps con interpolación. MHF1 funciona actualmente a 30 fps; su interpolación está incluida en la próxima release. Puedes cambiar el ajuste mientras juegas.',
     'st.k3': 'Juego en línea', 'st.v3': 'El juego en línea es experimental. Usa los mismos servidores ad hoc que PPSSPP, por lo que los jugadores de MHForever pueden cazar con otros usuarios de MHForever y de PPSSPP. Incluye códigos de amigo, presencia, invitaciones y salas privadas desde el launcher o el menú del juego.',
@@ -130,7 +130,7 @@
     'st.h': 'プロジェクトの活動',
     'st.p': 'Freedom Uniteは欧州・北米・日本の3つの版でプレイでき、Monster Hunter Freedomも欧州版でプレイ可能です。オンラインプレイは実験的です。オリジナルと見た目や動きが異なる場合は報告してください。',
     'st.issue': '問題を報告する',
-    'live.k': '最新リリース', 'live.dl': 'ダウンロード', 'live.notes': 'リリースノート', 'live.stars': 'スター', 'live.commit': '最終更新', 'live.issues': '未解決のIssue', 'live.ci': 'ビルド', 'ci.pass': '成功', 'ci.fail': '失敗', 'ci.run': '実行中', 'live.src': 'GitHubからリアルタイムで取得しています。',
+    'live.k': '最新リリース', 'live.dl': 'ダウンロード', 'live.notes': 'リリースノート', 'live.changes': '最新リリースの変更点', 'live.full': 'すべてのリリースノート', 'live.loading': 'リリースノートを読み込み中…', 'live.empty': 'リリースノートはありません。' 'live.stars': 'スター', 'live.commit': '最終更新', 'live.issues': '未解決のIssue', 'live.ci': 'ビルド', 'ci.pass': '成功', 'ci.fail': '失敗', 'ci.run': '実行中', 'live.src': 'GitHubからリアルタイムで取得しています。',
     'st.k1': '対応タイトル', 'st.v1': 'Monster Hunter Freedom Unite（PSP）：欧州版（ULES01213）、北米版（ULUS10391）、日本版（Monster Hunter Portable 2nd G、ULJM05500）。Monster Hunter Freedom（MHF1）：欧州版（ULES00318）、Freedom DX v1.8.6パッチにも対応。ゲームのコピーごとに設定を保存します。',
     'st.k2': 'フレームレート', 'st.v2': 'Freedom Uniteは標準の30fps、またはフレーム補間による60〜180fpsに対応。MHF1は現在30fpsで動作し、フレーム補間は次回リリースに含まれます。プレイ中に設定を変更できます。',
     'st.k3': 'オンラインプレイ', 'st.v3': 'PPSSPPと同じアドホックサーバーで、ほかのMHForeverプレイヤーやPPSSPPのプレイヤーと一緒に狩りに行けます（0.6から）。0.8からは、コードで追加するフレンド、誰がどこでオンラインかの表示、招待とワンクリック参加、コード付きのプライベートルームに、ランチャーとゲーム内メニューの両方から対応しています。',
@@ -259,8 +259,59 @@
     catch (e) { return String(iso).slice(0, 10); }
   }
   function fmtSize(b) { return b >= 1048576 ? (b / 1048576).toFixed(1) + ' MB' : ''; }
+  function renderReleaseNotes(rel) {
+    var title = $('releaseTitle'), body = $('releaseNotes');
+    if (!title || !body) return;
+    body.textContent = '';
+    if (!rel) {
+      title.textContent = '—';
+      var empty = document.createElement('p');
+      empty.textContent = (DICT[lang] && DICT[lang]['live.empty']) || 'Release notes unavailable.';
+      body.appendChild(empty);
+      return;
+    }
+    title.textContent = rel.name || rel.tag_name || 'Latest release';
+    var source = String(rel.body || '');
+    var lines = source.split(/\r?\n/);
+    var sections = [], current = null;
+    lines.forEach(function (line) {
+      var heading = line.match(/^\s{0,3}#{1,3}\s+(.+?)\s*#*\s*$/);
+      if (heading) {
+        if (/^(new|added|features?|fixed|fixes|improved|improvements|changed|changes|highlights)$/i.test(heading[1].replace(/[*_]/g, '').trim())) {
+          current = { title: heading[1].replace(/[*_]/g, '').trim(), items: [] };
+          sections.push(current);
+        } else current = null;
+      } else if (current) {
+        var item = line.match(/^\s*[-*+]\s+(.+)$/);
+        if (item && current.items.length < 4) current.items.push(item[1].replace(/\*\*/g, '').replace(/\*/g, '').trim());
+      }
+    });
+    sections = sections.filter(function (section) { return section.items.length; }).slice(0, 2);
+    if (!sections.length) {
+      var fallback = document.createElement('p');
+      fallback.textContent = (DICT[lang] && DICT[lang]['live.empty']) || 'Release notes unavailable.';
+      body.appendChild(fallback);
+      return;
+    }
+    sections.forEach(function (section) {
+      var group = document.createElement('section');
+      var headingEl = document.createElement('h4');
+      headingEl.textContent = section.title;
+      group.appendChild(headingEl);
+      var list = document.createElement('ul');
+      section.items.forEach(function (item) {
+        var li = document.createElement('li');
+        li.textContent = item;
+        list.appendChild(li);
+      });
+      group.appendChild(list);
+      body.appendChild(group);
+    });
+  }
+
   function renderLive() {
     var rel = live.rel, repo = live.repo;
+    renderReleaseNotes(rel);
     if (rel) {
       $('liveVer').textContent = String(rel.tag_name).replace(/^v/, '');
       $('liveDate').textContent = rel.published_at ? fmtDate(rel.published_at) : '';

@@ -321,10 +321,9 @@
 
   <!-- ------------------------------------------------------------ status -->
   <section class="block" id="status">
-    <div class="wrap">
-      <div class="head">
-        <h2 data-i18n="st.h">Project activity</h2>
-        
+    <div class="wrap two status-layout">
+      <div class="head status-summary">
+        <h2 data-i18n="st.h">Project status</h2>
         <a class="btn ghost" href="https://github.com/Mango77x/MHForever/issues" rel="noopener" data-i18n="st.issue">Report a problem</a>
         <div class="live" id="live" aria-live="polite">
           <p class="live-k" data-i18n="live.k">Latest release</p>
@@ -332,7 +331,6 @@
           <div class="live-act">
             <a class="btn primary dl-latest" id="liveDl" href="https://github.com/Mango77x/MHForever/releases/latest" rel="noopener"><span data-i18n="live.dl">Download</span><span id="liveSize"></span></a>
             <a class="btn ghost" id="liveAlt" href="https://github.com/Mango77x/MHForever/releases/latest" rel="noopener" data-i18n="live.altl">Linux download</a>
-            <a class="btn ghost" id="liveNotes" href="https://github.com/Mango77x/MHForever/releases/latest" rel="noopener" data-i18n="live.notes">Release notes</a>
           </div>
           <dl class="live-stats">
             <div><dt data-i18n="live.stars">Stars</dt><dd id="liveStars">&mdash;</dd></div>
@@ -343,7 +341,19 @@
           <p class="live-src" data-i18n="live.src">Read live from GitHub.</p>
         </div>
       </div>
-  </div>
+      <aside class="release-panel" aria-live="polite">
+        <div class="release-head">
+          <div>
+            <p class="live-k" data-i18n="live.changes">Latest release notes</p>
+            <h3 id="releaseTitle">—</h3>
+          </div>
+          <a class="release-full" id="liveNotes" href="https://github.com/Mango77x/MHForever/releases/latest" rel="noopener" data-i18n="live.full">Full notes</a>
+        </div>
+        <div id="releaseNotes" class="release-notes">
+          <p class="release-loading" data-i18n="live.loading">Loading release notes…</p>
+        </div>
+      </aside>
+    </div>
   </section>
 
   <!-- ------------------------------------------------------------ roadmap -->
