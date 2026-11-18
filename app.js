@@ -130,7 +130,7 @@
     'st.h': 'プロジェクトの活動',
     'st.p': 'Freedom Uniteは欧州・北米・日本の3つの版でプレイでき、Monster Hunter Freedomも欧州版でプレイ可能です。オンラインプレイは実験的です。オリジナルと見た目や動きが異なる場合は報告してください。',
     'st.issue': '問題を報告する',
-    'live.k': '最新リリース', 'live.dl': 'ダウンロード', 'live.notes': 'リリースノート', 'live.changes': '最新リリースの変更点', 'live.full': 'すべてのリリースノート', 'live.loading': 'リリースノートを読み込み中…', 'live.empty': 'リリースノートはありません。' 'live.stars': 'スター', 'live.commit': '最終更新', 'live.issues': '未解決のIssue', 'live.ci': 'ビルド', 'ci.pass': '成功', 'ci.fail': '失敗', 'ci.run': '実行中', 'live.src': 'GitHubからリアルタイムで取得しています。',
+    'live.k': '最新リリース', 'live.dl': 'ダウンロード', 'live.notes': 'リリースノート', 'live.changes': '最新リリースの変更点', 'live.full': 'すべてのリリースノート', 'live.loading': 'リリースノートを読み込み中…', 'live.empty': 'リリースノートはありません。', 'live.stars': 'スター', 'live.commit': '最終更新', 'live.issues': '未解決のIssue', 'live.ci': 'ビルド', 'ci.pass': '成功', 'ci.fail': '失敗', 'ci.run': '実行中', 'live.src': 'GitHubからリアルタイムで取得しています。',
     'st.k1': '対応タイトル', 'st.v1': 'Monster Hunter Freedom Unite（PSP）：欧州版（ULES01213）、北米版（ULUS10391）、日本版（Monster Hunter Portable 2nd G、ULJM05500）。Monster Hunter Freedom（MHF1）：欧州版（ULES00318）、Freedom DX v1.8.6パッチにも対応。ゲームのコピーごとに設定を保存します。',
     'st.k2': 'フレームレート', 'st.v2': 'Freedom Uniteは標準の30fps、またはフレーム補間による60〜180fpsに対応。MHF1は現在30fpsで動作し、フレーム補間は次回リリースに含まれます。プレイ中に設定を変更できます。',
     'st.k3': 'オンラインプレイ', 'st.v3': 'PPSSPPと同じアドホックサーバーで、ほかのMHForeverプレイヤーやPPSSPPのプレイヤーと一緒に狩りに行けます（0.6から）。0.8からは、コードで追加するフレンド、誰がどこでオンラインかの表示、招待とワンクリック参加、コード付きのプライベートルームに、ランチャーとゲーム内メニューの両方から対応しています。',
@@ -380,7 +380,7 @@
 
   /* ------------------------------------------------------------ reveal on scroll */
 
-  var revealSel = '.head, .games, .rows .row, .table > div, .timeline li, .faq details, .demo, .vm > div, .final-in, .how > *';
+  var revealSel = '.head, .release-panel, .games, .rows .row, .table > div, .timeline li, .faq details, .demo, .vm > div, .final-in, .how > *';
   var targets = Array.prototype.slice.call(document.querySelectorAll(revealSel));
   if ('IntersectionObserver' in window && !reduce) {
     var io = new IntersectionObserver(function (es) {
