@@ -272,18 +272,18 @@
     }
     title.textContent = rel.name || rel.tag_name || 'Latest release';
     var source = String(rel.body || '');
-    var lines = source.split(/\\r?\\n/);
+    var lines = source.split(/\r?\n/);
     var sections = [], current = null;
     lines.forEach(function (line) {
-      var heading = line.match(/^\\s{0,3}#{1,3}\\s+(.+?)\\s*#*\\s*$/);
+      var heading = line.match(/^\s{0,3}#{1,3}\s+(.+?)\s*#*\s*$/);
       if (heading) {
         if (/^(new|added|features?|fixed|fixes|improved|improvements|changed|changes|highlights)$/i.test(heading[1].replace(/[*_]/g, '').trim())) {
           current = { title: heading[1].replace(/[*_]/g, '').trim(), items: [] };
           sections.push(current);
         } else current = null;
       } else if (current) {
-        var item = line.match(/^\\s*[-*+]\\s+(.+)$/);
-        if (item && current.items.length < 4) current.items.push(item[1].replace(/\\*\\*/g, '').replace(/\\*/g, '').trim());
+        var item = line.match(/^\s*[-*+]\s+(.+)$/);
+        if (item && current.items.length < 4) current.items.push(item[1].replace(/\*\*/g, '').replace(/\*/g, '').trim());
       }
     });
     sections = sections.filter(function (section) { return section.items.length; }).slice(0, 2);
