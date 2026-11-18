@@ -9,7 +9,7 @@
   /* ------------------------------------------------------------ language */
 
   var ES = {
-    'nav.project': 'Proyecto', 'nav.games': 'Juegos', 'nav.how': 'Cómo funciona', 'nav.fps': 'Fotogramas', 'nav.status': 'Estado',
+    'nav.project': 'Proyecto', 'nav.games': 'Juegos', 'nav.how': 'Cómo funciona', 'nav.fps': 'Fotogramas', 'nav.status': 'Actividad',
     'nav.roadmap': 'Hoja de ruta', 'nav.faq': 'Preguntas', 'nav.star': 'Estrella en GitHub',
     'hero.h1': 'Los Monster Hunter clásicos, ejecutándose de forma nativa en PC.',
     'hero.sub': 'MHForever es una plataforma multijuego de ports nativos no oficiales creados mediante recompilación estática. Actualmente puedes jugar a Freedom Unite (EU, NA y JP) y Monster Hunter Freedom (EU). Hay más títulos planeados.',
@@ -95,7 +95,7 @@
   };
 
   var JA = {
-    'nav.project': 'プロジェクト', 'nav.games': '対応ゲーム', 'nav.how': '使い方', 'nav.fps': 'フレームレート', 'nav.status': '現状',
+    'nav.project': 'プロジェクト', 'nav.games': '対応ゲーム', 'nav.how': '使い方', 'nav.fps': 'フレームレート', 'nav.status': '活動',
     'nav.roadmap': 'ロードマップ', 'nav.faq': 'よくある質問', 'nav.star': 'GitHubでスター',
     'hero.h1': '往年のモンスターハンターを、PCネイティブで。',
     'hero.sub': 'MHForeverは、静的再コンパイルによる非公式ネイティブPC移植のマルチゲームプラットフォームです。現在、Freedom Unite（欧州・北米・日本版）とMonster Hunter Freedom（欧州版）がプレイ可能です。ほかの作品も予定しています。',
